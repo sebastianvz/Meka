@@ -1,0 +1,16 @@
+﻿@{
+    string loginLayout = "~/Views/Shared/_Layout.cshtml";
+    string adminLayout = "~/Views/Shared/_AdminLayout.cshtml";
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+
+    switch(controller)
+    {
+        case "Admin": Layout = adminLayout;
+            break;
+        case "Home":
+            Layout = loginLayout;
+            break;
+    }
+
+    Layout = Layout;
+}

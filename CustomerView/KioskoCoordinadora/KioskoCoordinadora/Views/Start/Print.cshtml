@@ -1,0 +1,107 @@
+﻿<div class="print" style="display:none">
+    <div class="row justify-content-center" align="center">
+
+        <div class="col-sm-12">
+            <h5 class="step-title"> IMPRESIÓN Y PEGADO DE ETIQUETA</h5>
+        </div>
+        <div class="col-sm-12 mt-5" id="print_guide_image" style="display:none">
+            <div class="card" style="width: 40em;">
+                <img style="height:400px" class="card-img-top" id="print_image" src="~/Assets/kiosko/img/paste_guide.gif" alt="">
+                <div class="card-body" style="background-color:#00397c;">
+                    <div style="display: flex; justify-content: space-between; color:white" id="retry_print_guide_btn">
+                        <p>Presione siguiente para continuar. Si desea imprimir nuevamente su etiqueta presione aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 mt-3">
+            <div id="print_guide_container">
+                <p class="btn-default-1 animated" id="print-guide-text" style="border:0px !important; font-size:40px;">
+                </p>
+            </div>
+            <a href="#" class="btn btn-default-1" role="button" aria-disabled="true" enable_print="true" id="print_guide_btn" guide_number="" style="font-size:40px;margin-top:200px">
+                PRESIONE PARA IMPRIMIR ETIQUETA
+            </a>
+            <div id="warningPrint" style="display:grid; grid-template-columns:100px 500px; justify-content: center; margin-top:30px">
+                <div style="padding:10px">
+                    <i class="fas fa-exclamation-triangle fa-3x" style="color:white"></i>
+                </div>
+                <div style="color:white; border-left: 2px solid white">
+                    <h4 style="text-align:start; margin-left: 20px; margin-bottom: 5px; margin-top: 5px">Tenga en cuenta las recomendaciones<br> del aviso que se encuentra en la báscula</h4>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade " tabindex="-1" role="dialog" id="finish_proccess_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-check" style="color:white;font-size:4em"></i></h5>
+
+            </div>
+            <div class="modal-body" style="justify-content:center">
+                <h4 class="text-primary text-center">El proceso ha finalizado correctamente. </h4>
+                <h4 class="text-primary text-center">Recuerde tomar su factura.</h4>
+                <h4 class="text-primary text-center">Gracias por utilizar nuestros servicios.</h4>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade " tabindex="-1" role="dialog" id="finish_proccess_help">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Indicaciones de pegado</h5>
+            </div>
+            <div class="modal-body" style="justify-content:center">
+                <img class="img-fluid" src="~/Assets/kiosko/img/paste_guide.gif" />
+            </div>
+            <div class="modal-footer" style="justify-content:center">
+                <button type="button" class="btn btn-lg btn-primary" data-dismiss="modal">ENTENDIDO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .modal-dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%) !important;
+    }
+
+    .modal-content {
+        text-align: center !important;
+    }
+
+    .modal-header {
+        display: block !important;
+    }
+</style>
+<div class="modal fade " tabindex="-1" role="dialog" id="modal_open_door" style="text-align:center">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">INGRESE LOS PAQUETES</h3>
+
+            </div>
+            <div class="modal-body" style="justify-content:center">
+                <p style="font-size:1.5em" id="modal_message_test">EL RECIBIDOR DE PAQUETES SE ABRIRÁ </p>
+                <p style="font-size:1.5em;font-weight:bold">ESTADO</p>
+                <a href="#" class="btn welcome-button-t" role="button" aria-disabled="true" id="door_status_t">
+                    ABIERTA
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

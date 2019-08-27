@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://ws.coordinadora.com/ags/1.5/server.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="RpcServerSoapManager" targetNamespace="https://ws.coordinadora.com/ags/1.5/server.php" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://ws.coordinadora.com/ags/1.5/server.php">
+      <xsd:complexType name="Type_void">
+        <xsd:all />
+      </xsd:complexType>
+      <xsd:element name="Cotizador_departamentos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Type_void" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Cotizador_departamentosOut">
+        <xsd:all>
+          <xsd:element name="codigo" type="xsd:string" />
+          <xsd:element name="nombre" type="xsd:string" />
+          <xsd:element name="abreviado" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCotizador_departamentosout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Cotizador_departamentosOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_departamentosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cotizador_departamentosResult" type="tns:ArrayOfCotizador_departamentosout" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Cotizador_ciudades">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Type_void" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Cotizador_ciudadesOut">
+        <xsd:all>
+          <xsd:element name="codigo" type="xsd:string" />
+          <xsd:element name="nombre" type="xsd:string" />
+          <xsd:element name="abreviado" type="xsd:string" />
+          <xsd:element name="tipo_poblacion" type="xsd:string" />
+          <xsd:element name="codigo_departamento" type="xsd:string" />
+          <xsd:element name="nombre_departamento" type="xsd:string" />
+          <xsd:element name="estado" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCotizador_ciudadesout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Cotizador_ciudadesOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_ciudadesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cotizador_ciudadesResult" type="tns:ArrayOfCotizador_ciudadesout" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfInt">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Cotizador_detalleEmpaques">
+        <xsd:all>
+          <xsd:element name="ubl" type="xsd:string" />
+          <xsd:element name="alto" type="xsd:string" />
+          <xsd:element name="ancho" type="xsd:string" />
+          <xsd:element name="largo" type="xsd:string" />
+          <xsd:element name="peso" type="xsd:string" />
+          <xsd:element name="unidades" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCotizador_detalleempaques">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Cotizador_detalleEmpaques" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Cotizador_cotizarIn">
+        <xsd:all>
+          <xsd:element name="nit" type="xsd:string" />
+          <xsd:element name="div" type="xsd:string" />
+          <xsd:element name="cuenta" type="xsd:string" />
+          <xsd:element name="producto" type="xsd:string" />
+          <xsd:element name="origen" type="xsd:string" />
+          <xsd:element name="destino" type="xsd:string" />
+          <xsd:element name="valoracion" type="xsd:string" />
+          <xsd:element name="nivel_servicio" type="tns:ArrayOfInt" />
+          <xsd:element name="detalle" type="tns:ArrayOfCotizador_detalleempaques" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_cotizar">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Cotizador_cotizarIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Cotizador_cotizarOut">
+        <xsd:all>
+          <xsd:element name="flete_total" type="xsd:int" />
+          <xsd:element name="flete_fijo" type="xsd:float" />
+          <xsd:element name="flete_variable" type="xsd:float" />
+          <xsd:element name="peso_liquidado" type="xsd:float" />
+          <xsd:element name="otros_valores" type="xsd:float" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="ubl" type="xsd:int" />
+          <xsd:element name="volumen" type="xsd:float" />
+          <xsd:element name="peso_real" type="xsd:float" />
+          <xsd:element name="dias_entrega" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_cotizarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cotizador_cotizarResult" type="tns:Cotizador_cotizarOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Cotizador_cotizarInterIn">
+        <xsd:all>
+          <xsd:element name="nit" type="xsd:string" />
+          <xsd:element name="div" type="xsd:string" />
+          <xsd:element name="producto" type="xsd:string" />
+          <xsd:element name="ciudad_origen" type="xsd:string" />
+          <xsd:element name="pais_destino" type="xsd:string" />
+          <xsd:element name="ciudad_destino" type="xsd:string" />
+          <xsd:element name="codigo_postal" type="xsd:string" />
+          <xsd:element name="valoracion" type="xsd:string" />
+          <xsd:element name="detalle" type="tns:ArrayOfCotizador_detalleempaques" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_cotizarInter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Cotizador_cotizarInterIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Cotizador_cotizarInterOut">
+        <xsd:all>
+          <xsd:element name="peso" type="xsd:float" />
+          <xsd:element name="volumen" type="xsd:float" />
+          <xsd:element name="peso_liquidado" type="xsd:float" />
+          <xsd:element name="total_seguro" type="xsd:float" />
+          <xsd:element name="total_combustible" type="xsd:float" />
+          <xsd:element name="total_area_extendida" type="xsd:float" />
+          <xsd:element name="recargo_sobredimension" type="xsd:float" />
+          <xsd:element name="tarifa" type="xsd:float" />
+          <xsd:element name="porcentaje_descuento" type="xsd:float" />
+          <xsd:element name="total" type="xsd:float" />
+          <xsd:element name="trm" type="xsd:float" />
+          <xsd:element name="dias_entrega" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Cotizador_cotizarInterResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cotizador_cotizarInterResult" type="tns:Cotizador_cotizarInterOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Guias_reportarNovedadIn">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="codigo_novedad" type="xsd:int" />
+          <xsd:element name="direccion" type="xsd:string" />
+          <xsd:element name="ciudad" type="xsd:string" />
+          <xsd:element name="destinatario" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="autorizado" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Guias_reportarNovedad">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Guias_reportarNovedadIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Guias_reportarNovedadOut">
+        <xsd:all>
+          <xsd:element name="error" type="xsd:boolean" />
+          <xsd:element name="mensaje" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Guias_reportarNovedadResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Guias_reportarNovedadResult" type="tns:Guias_reportarNovedadOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recaudos_In">
+        <xsd:all>
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recaudos_consultar">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recaudos_In" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recaudos_Out">
+        <xsd:all>
+          <xsd:element name="id_corte" type="xsd:int" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="fechahora_recaudo" type="xsd:string" />
+          <xsd:element name="anulado" type="xsd:boolean" />
+          <xsd:element name="forma_pago" type="xsd:int" />
+          <xsd:element name="valor" type="xsd:float" />
+          <xsd:element name="numero_aprobacion" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfRecaudos_out">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Recaudos_Out" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Recaudos_consultarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recaudos_consultarResult" type="tns:ArrayOfRecaudos_out" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_solicitarIn">
+        <xsd:all>
+          <xsd:element name="modalidad" type="xsd:int" />
+          <xsd:element name="fecha_recogida" type="xsd:string" />
+          <xsd:element name="ciudad_origen" type="xsd:string" />
+          <xsd:element name="ciudad_destino" type="xsd:string" />
+          <xsd:element name="nombre_destinatario" type="xsd:string" />
+          <xsd:element name="nit_destinatario" type="xsd:string" />
+          <xsd:element name="direccion_destinatario" type="xsd:string" />
+          <xsd:element name="telefono_destinatario" type="xsd:string" />
+          <xsd:element name="nombre_empresa" type="xsd:string" />
+          <xsd:element name="nombre_contacto" type="xsd:string" />
+          <xsd:element name="direccion" type="xsd:string" />
+          <xsd:element name="telefono" type="xsd:string" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="nivel_servicio" type="xsd:string" />
+          <xsd:element name="guia_inicial" type="xsd:string" />
+          <xsd:element name="nit_cliente" type="xsd:string" />
+          <xsd:element name="div_cliente" type="xsd:string" />
+          <xsd:element name="persona_autoriza" type="xsd:string" />
+          <xsd:element name="telefono_autoriza" type="xsd:string" />
+          <xsd:element name="tipo_notificacion" type="xsd:string" />
+          <xsd:element name="destino_notificacion" type="xsd:string" />
+          <xsd:element name="valor_declarado" type="xsd:float" />
+          <xsd:element name="unidades" type="xsd:int" />
+          <xsd:element name="observaciones" type="xsd:string" />
+          <xsd:element name="estado" type="xsd:int" />
+          <xsd:element name="centro_costos" type="xsd:string" />
+          <xsd:element name="cuenta_contable" type="xsd:string" />
+          <xsd:element name="datafono" type="xsd:boolean" />
+          <xsd:element name="agente" type="xsd:string" />
+          <xsd:element name="contenido" type="xsd:string" />
+          <xsd:element name="equipo" type="xsd:string" />
+          <xsd:element name="sub_equipo" type="xsd:string" />
+          <xsd:element name="nit_remite" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_programar">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recogidas_solicitarIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_solicitarOut">
+        <xsd:all>
+          <xsd:element name="id" type="xsd:int" />
+          <xsd:element name="mensaje" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_programarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recogidas_programarResult" type="tns:Recogidas_solicitarOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_SeguimientoIn">
+        <xsd:all>
+          <xsd:element name="id_recogida" type="xsd:int" />
+          <xsd:element name="nit_cliente" type="xsd:string" />
+          <xsd:element name="div_cliente" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimiento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recogidas_SeguimientoIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Recogidas_SeguimientoOut">
+        <xsd:all>
+          <xsd:element name="id_recogida" type="xsd:string" />
+          <xsd:element name="codigo_estado" type="xsd:int" />
+          <xsd:element name="descripcion_estado" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="guias" type="tns:ArrayOfString" />
+          <xsd:element name="causal" type="xsd:string" />
+          <xsd:element name="codigo_causal" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recogidas_seguimientoResult" type="tns:Recogidas_SeguimientoOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Recogidas_seguimientoExt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recogidas_SeguimientoIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogida_SeguimientoExtOut">
+        <xsd:all>
+          <xsd:element name="contacto" type="xsd:string" />
+          <xsd:element name="telefono" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="id_recogida" type="xsd:string" />
+          <xsd:element name="codigo_estado" type="xsd:int" />
+          <xsd:element name="descripcion_estado" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="guias" type="tns:ArrayOfString" />
+          <xsd:element name="causal" type="xsd:string" />
+          <xsd:element name="codigo_causal" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoExtResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recogidas_seguimientoExtResult" type="tns:Recogida_SeguimientoExtOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_SeguimientoPorFechaIn">
+        <xsd:all>
+          <xsd:element name="fecha_inicial" type="xsd:string" />
+          <xsd:element name="fecha_final" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoPorFecha">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recogidas_SeguimientoPorFechaIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_SeguimientoPorFechaOut">
+        <xsd:all>
+          <xsd:element name="id_recogida" type="xsd:string" />
+          <xsd:element name="codigo_estado" type="xsd:int" />
+          <xsd:element name="descripcion_estado" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="guias" type="tns:ArrayOfString" />
+          <xsd:element name="causal" type="xsd:string" />
+          <xsd:element name="codigo_causal" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfRecogidas_seguimientoporfechaout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Recogidas_SeguimientoPorFechaOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoPorFechaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recogidas_seguimientoPorFechaResult" type="tns:ArrayOfRecogidas_seguimientoporfechaout" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Recogidas_SeguimientoReferenciaIn">
+        <xsd:all>
+          <xsd:element name="nit_cliente" type="xsd:string" />
+          <xsd:element name="div_cliente" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoFCDetalladoPorReferencia">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Recogidas_SeguimientoReferenciaIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfRecogida_seguimientoextout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Recogida_SeguimientoExtOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Recogidas_seguimientoFCDetalladoPorReferenciaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Recogidas_seguimientoFCDetalladoPorReferenciaResult" type="tns:ArrayOfRecogida_seguimientoextout" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_generar_detalleIn">
+        <xsd:all>
+          <xsd:element name="tipo" type="xsd:string" />
+          <xsd:element name="codigos" type="tns:ArrayOfString" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Rotulos_generarIn">
+        <xsd:all>
+          <xsd:element name="id_tipo_rotulo" type="xsd:string" />
+          <xsd:element name="detalles" type="tns:Rotulos_generar_detalleIn" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_generar">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Rotulos_generarIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_cmOut">
+        <xsd:all>
+          <xsd:element name="pdf" type="xsd:string" />
+          <xsd:element name="error" type="xsd:boolean" />
+          <xsd:element name="mensaje" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_generarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Rotulos_generarResult" type="tns:Rotulos_cmOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_integracionIn">
+        <xsd:all>
+          <xsd:element name="codigo" type="xsd:string" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_integracion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Rotulos_integracionIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_integracionOut">
+        <xsd:all>
+          <xsd:element name="etiqueta1d" type="xsd:string" />
+          <xsd:element name="etiqueta2d" type="xsd:string" />
+          <xsd:element name="nombre_nivel_servicio" type="xsd:string" />
+          <xsd:element name="abreviado_cuenta" type="xsd:string" />
+          <xsd:element name="abreviado_producto" type="xsd:string" />
+          <xsd:element name="codigo_terminal_origen" type="xsd:string" />
+          <xsd:element name="abreviado_terminal_origen" type="xsd:string" />
+          <xsd:element name="codigo_terminal_destino" type="xsd:string" />
+          <xsd:element name="abreviado_terminal_destino" type="xsd:string" />
+          <xsd:element name="zona_reparto" type="xsd:string" />
+          <xsd:element name="subzona_reparto" type="xsd:string" />
+          <xsd:element name="referencia_detalle" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfRotulos_integracionout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Rotulos_integracionOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_integracionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Rotulos_integracionResult" type="tns:ArrayOfRotulos_integracionout" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_imprimir_cmIn">
+        <xsd:all>
+          <xsd:element name="codigos" type="tns:ArrayOfString" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_imprimirCm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Rotulos_imprimir_cmIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Rotulos_imprimirCmResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Rotulos_imprimirCmResult" type="tns:Rotulos_cmOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_previoIn">
+        <xsd:all>
+          <xsd:element name="cuenta" type="xsd:int" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="unidades" type="xsd:int" />
+          <xsd:element name="peso" type="xsd:float" />
+          <xsd:element name="nivel_servicio" type="xsd:int" />
+          <xsd:element name="direccion_destinatario" type="xsd:string" />
+          <xsd:element name="ciudad_destino" type="xsd:string" />
+          <xsd:element name="telefono_destinatario" type="xsd:string" />
+          <xsd:element name="nombre_destinatario" type="xsd:string" />
+          <xsd:element name="direccion_remitente" type="xsd:string" />
+          <xsd:element name="ciudad_origen" type="xsd:string" />
+          <xsd:element name="telefono_remitente" type="xsd:string" />
+          <xsd:element name="nombre_remitente" type="xsd:string" />
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="numero_unidad" type="xsd:int" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="referencia_detalle" type="xsd:string" />
+          <xsd:element name="observaciones" type="xsd:string" />
+          <xsd:element name="tipo_respuesta" type="xsd:string" />
+          <xsd:element name="id_rotulo" type="xsd:int" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_previo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Rotulos_previoIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Rotulos_previoOut">
+        <xsd:all>
+          <xsd:element name="etiqueta1d" type="xsd:string" />
+          <xsd:element name="etiqueta2d" type="xsd:string" />
+          <xsd:element name="nombre_nivel_servicio" type="xsd:string" />
+          <xsd:element name="abreviado_cuenta" type="xsd:string" />
+          <xsd:element name="abreviado_producto" type="xsd:string" />
+          <xsd:element name="codigo_terminal_origen" type="xsd:string" />
+          <xsd:element name="abreviado_terminal_origen" type="xsd:string" />
+          <xsd:element name="codigo_terminal_destino" type="xsd:string" />
+          <xsd:element name="abreviado_terminal_destino" type="xsd:string" />
+          <xsd:element name="zona_reparto" type="xsd:string" />
+          <xsd:element name="subzona_reparto" type="xsd:string" />
+          <xsd:element name="referencia_detalle" type="xsd:string" />
+          <xsd:element name="error" type="xsd:string" />
+          <xsd:element name="pdf" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Rotulos_previoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Rotulos_previoResult" type="tns:Rotulos_previoOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Seguimiento_simpleIn">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="nit" type="xsd:string" />
+          <xsd:element name="div" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="imagen" type="xsd:int" />
+          <xsd:element name="anexo" type="xsd:int" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Seguimiento_simple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Seguimiento_simpleIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Seguimiento_detalle">
+        <xsd:all>
+          <xsd:element name="codigo" type="xsd:string" />
+          <xsd:element name="descripcion" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="fecha_texto" type="xsd:string" />
+          <xsd:element name="hora" type="xsd:string" />
+          <xsd:element name="hora_ap" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Seguimiento_novedades">
+        <xsd:all>
+          <xsd:element name="codigo" type="xsd:string" />
+          <xsd:element name="descripcion" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="hora" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Seguimiento_anexo">
+        <xsd:all>
+          <xsd:element name="anexo" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSeguimiento_anexo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Seguimiento_anexo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Seguimiento_guiaViculadaOut">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="tipo_vinculo" type="xsd:int" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="tipo_cuenta" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSeguimiento_guiaviculadaout">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Seguimiento_guiaViculadaOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Seguimiento_simpleOut">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="estado" type="tns:Seguimiento_detalle" />
+          <xsd:element name="novedad" type="tns:Seguimiento_novedades" />
+          <xsd:element name="tiene_anexo" type="xsd:int" />
+          <xsd:element name="imagen" type="xsd:string" />
+          <xsd:element name="anexos" type="tns:ArrayOfSeguimiento_anexo" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="nombre_origen" type="xsd:string" />
+          <xsd:element name="nombre_destino" type="xsd:string" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="guias_vinculadas" type="tns:ArrayOfSeguimiento_guiaviculadaout" />
+          <xsd:element name="dias_promesa_servicio" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Seguimiento_simpleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Seguimiento_simpleResult" type="tns:Seguimiento_simpleOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Seguimiento_detalladoIn">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="nit" type="xsd:string" />
+          <xsd:element name="div" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="imagen" type="xsd:int" />
+          <xsd:element name="anexo" type="xsd:int" />
+          <xsd:element name="apikey" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Seguimiento_detallado">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="p" type="tns:Seguimiento_detalladoIn" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfSeguimiento_detalle">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Seguimiento_detalle" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSeguimiento_novedades">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:Seguimiento_novedades" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Seguimiento_detalladoOut">
+        <xsd:all>
+          <xsd:element name="codigo_remision" type="xsd:string" />
+          <xsd:element name="imagen" type="xsd:string" />
+          <xsd:element name="estados" type="tns:ArrayOfSeguimiento_detalle" />
+          <xsd:element name="novedades" type="tns:ArrayOfSeguimiento_novedades" />
+          <xsd:element name="tiene_anexo" type="xsd:int" />
+          <xsd:element name="anexos" type="tns:ArrayOfSeguimiento_anexo" />
+          <xsd:element name="nombre_origen" type="xsd:string" />
+          <xsd:element name="nombre_destino" type="xsd:string" />
+          <xsd:element name="referencia" type="xsd:string" />
+          <xsd:element name="producto" type="xsd:int" />
+          <xsd:element name="guias_vinculadas" type="tns:ArrayOfSeguimiento_guiaviculadaout" />
+          <xsd:element name="dias_promesa_servicio" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="Seguimiento_detalladoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Seguimiento_detalladoResult" type="tns:Seguimiento_detalladoOut" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Cotizador_departamentosIn">
+    <wsdl:part name="parameters" element="tns:Cotizador_departamentos" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_departamentosOut">
+    <wsdl:part name="parameters" element="tns:Cotizador_departamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_ciudadesIn">
+    <wsdl:part name="parameters" element="tns:Cotizador_ciudades" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_ciudadesOut">
+    <wsdl:part name="parameters" element="tns:Cotizador_ciudadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_cotizarIn">
+    <wsdl:part name="parameters" element="tns:Cotizador_cotizar" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_cotizarOut">
+    <wsdl:part name="parameters" element="tns:Cotizador_cotizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_cotizarInterIn">
+    <wsdl:part name="parameters" element="tns:Cotizador_cotizarInter" />
+  </wsdl:message>
+  <wsdl:message name="Cotizador_cotizarInterOut">
+    <wsdl:part name="parameters" element="tns:Cotizador_cotizarInterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Guias_reportarNovedadIn">
+    <wsdl:part name="parameters" element="tns:Guias_reportarNovedad" />
+  </wsdl:message>
+  <wsdl:message name="Guias_reportarNovedadOut">
+    <wsdl:part name="parameters" element="tns:Guias_reportarNovedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recaudos_consultarIn">
+    <wsdl:part name="parameters" element="tns:Recaudos_consultar" />
+  </wsdl:message>
+  <wsdl:message name="Recaudos_consultarOut">
+    <wsdl:part name="parameters" element="tns:Recaudos_consultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_programarIn">
+    <wsdl:part name="parameters" element="tns:Recogidas_programar" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_programarOut">
+    <wsdl:part name="parameters" element="tns:Recogidas_programarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoIn">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimiento" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoOut">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoExtIn">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoExt" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoExtOut">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoPorFechaIn">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoPorFecha" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoPorFechaOut">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoPorFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoFCDetalladoPorReferenciaIn">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoFCDetalladoPorReferencia" />
+  </wsdl:message>
+  <wsdl:message name="Recogidas_seguimientoFCDetalladoPorReferenciaOut">
+    <wsdl:part name="parameters" element="tns:Recogidas_seguimientoFCDetalladoPorReferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_generarIn">
+    <wsdl:part name="parameters" element="tns:Rotulos_generar" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_generarOut">
+    <wsdl:part name="parameters" element="tns:Rotulos_generarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_integracionIn">
+    <wsdl:part name="parameters" element="tns:Rotulos_integracion" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_integracionOut">
+    <wsdl:part name="parameters" element="tns:Rotulos_integracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_imprimirCmIn">
+    <wsdl:part name="parameters" element="tns:Rotulos_imprimirCm" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_imprimirCmOut">
+    <wsdl:part name="parameters" element="tns:Rotulos_imprimirCmResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_previoIn">
+    <wsdl:part name="parameters" element="tns:Rotulos_previo" />
+  </wsdl:message>
+  <wsdl:message name="Rotulos_previoOut">
+    <wsdl:part name="parameters" element="tns:Rotulos_previoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Seguimiento_simpleIn">
+    <wsdl:part name="parameters" element="tns:Seguimiento_simple" />
+  </wsdl:message>
+  <wsdl:message name="Seguimiento_simpleOut">
+    <wsdl:part name="parameters" element="tns:Seguimiento_simpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Seguimiento_detalladoIn">
+    <wsdl:part name="parameters" element="tns:Seguimiento_detallado" />
+  </wsdl:message>
+  <wsdl:message name="Seguimiento_detalladoOut">
+    <wsdl:part name="parameters" element="tns:Seguimiento_detalladoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RpcServerSoapManagerPort">
+    <wsdl:operation name="Cotizador_departamentos">
+      <documentation>Departamentos</documentation>
+      <wsdl:input message="tns:Cotizador_departamentosIn" />
+      <wsdl:output message="tns:Cotizador_departamentosOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_ciudades">
+      <documentation>Ciudades cubiertas por Coordinadora, esta información se debe actualizar a diario.</documentation>
+      <wsdl:input message="tns:Cotizador_ciudadesIn" />
+      <wsdl:output message="tns:Cotizador_ciudadesOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_cotizar">
+      <documentation>Cotizar de envios</documentation>
+      <wsdl:input message="tns:Cotizador_cotizarIn" />
+      <wsdl:output message="tns:Cotizador_cotizarOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_cotizarInter">
+      <documentation>Cotizar de envios</documentation>
+      <wsdl:input message="tns:Cotizador_cotizarInterIn" />
+      <wsdl:output message="tns:Cotizador_cotizarInterOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guias_reportarNovedad">
+      <documentation>Reportar la novedad de una guia.</documentation>
+      <wsdl:input message="tns:Guias_reportarNovedadIn" />
+      <wsdl:output message="tns:Guias_reportarNovedadOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recaudos_consultar">
+      <wsdl:input message="tns:Recaudos_consultarIn" />
+      <wsdl:output message="tns:Recaudos_consultarOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_programar">
+      <documentation>Consulta de ciudades autorizadas como destino
+Excepciones: 10 -&gt; Ya existe una recogida programada.</documentation>
+      <wsdl:input message="tns:Recogidas_programarIn" />
+      <wsdl:output message="tns:Recogidas_programarOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimiento">
+      <documentation>El listado de posibles estados son:
+1=ASIGNADA
+2=EFECTIVA
+3=CANCELADA
+4=APLAZADA</documentation>
+      <wsdl:input message="tns:Recogidas_seguimientoIn" />
+      <wsdl:output message="tns:Recogidas_seguimientoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoExt">
+      <documentation>El listado de posibles estados son:
+1=ASIGNADA
+2=EFECTIVA
+3=CANCELADA
+4=APLAZADA</documentation>
+      <wsdl:input message="tns:Recogidas_seguimientoExtIn" />
+      <wsdl:output message="tns:Recogidas_seguimientoExtOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoPorFecha">
+      <documentation>@param Recogidas_SeguimientoPorFechaIn</documentation>
+      <wsdl:input message="tns:Recogidas_seguimientoPorFechaIn" />
+      <wsdl:output message="tns:Recogidas_seguimientoPorFechaOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoFCDetalladoPorReferencia">
+      <documentation>El listado de posibles estados son:
+1=ASIGNADA
+2=EFECTIVA
+3=CANCELADA
+4=APLAZADA</documentation>
+      <wsdl:input message="tns:Recogidas_seguimientoFCDetalladoPorReferenciaIn" />
+      <wsdl:output message="tns:Recogidas_seguimientoFCDetalladoPorReferenciaOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_generar">
+      <documentation>Servicio web para generación rótulos en PDF (base 64) a partir de unos filtros de información.</documentation>
+      <wsdl:input message="tns:Rotulos_generarIn" />
+      <wsdl:output message="tns:Rotulos_generarOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_integracion">
+      <documentation>Servicio web para generar Datos que sirvan de integración con los clientes.</documentation>
+      <wsdl:input message="tns:Rotulos_integracionIn" />
+      <wsdl:output message="tns:Rotulos_integracionOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_imprimirCm">
+      <documentation>Servicio web para generación rótulos en PDF (base 64) sin nigún filtro</documentation>
+      <wsdl:input message="tns:Rotulos_imprimirCmIn" />
+      <wsdl:output message="tns:Rotulos_imprimirCmOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_previo">
+      <documentation>Servicio web para generar Datos o PDF de una etiqueta sin guia.</documentation>
+      <wsdl:input message="tns:Rotulos_previoIn" />
+      <wsdl:output message="tns:Rotulos_previoOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seguimiento_simple">
+      <documentation>Consultar el estado de una guia</documentation>
+      <wsdl:input message="tns:Seguimiento_simpleIn" />
+      <wsdl:output message="tns:Seguimiento_simpleOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seguimiento_detallado">
+      <documentation>Seguimiento detallado</documentation>
+      <wsdl:input message="tns:Seguimiento_detalladoIn" />
+      <wsdl:output message="tns:Seguimiento_detalladoOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RpcServerSoapManagerBinding" type="tns:RpcServerSoapManagerPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Cotizador_departamentos">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Cotizador_departamentos" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_ciudades">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Cotizador_ciudades" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_cotizar">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Cotizador_cotizar" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador_cotizarInter">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Cotizador_cotizarInter" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guias_reportarNovedad">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Guias_reportarNovedad" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recaudos_consultar">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recaudos_consultar" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_programar">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recogidas_programar" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimiento">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recogidas_seguimiento" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoExt">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recogidas_seguimientoExt" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoPorFecha">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recogidas_seguimientoPorFecha" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recogidas_seguimientoFCDetalladoPorReferencia">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Recogidas_seguimientoFCDetalladoPorReferencia" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_generar">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Rotulos_generar" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_integracion">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Rotulos_integracion" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_imprimirCm">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Rotulos_imprimirCm" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rotulos_previo">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Rotulos_previo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seguimiento_simple">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Seguimiento_simple" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seguimiento_detallado">
+      <soap:operation soapAction="https://ws.coordinadora.com/ags/1.5/server.php#Seguimiento_detallado" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RpcServerSoapManagerService">
+    <wsdl:port name="RpcServerSoapManagerPort" binding="tns:RpcServerSoapManagerBinding">
+      <soap:address location="https://ws.coordinadora.com/ags/1.5/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

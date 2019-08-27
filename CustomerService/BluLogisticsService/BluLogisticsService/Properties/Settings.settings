@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BluLogisticsService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TCCService_co_com_tcc_clientes_liquidacion_LiquidacionAcuerdos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://clientes.tcc.com.co/preservicios/liquidacionacuerdos.asmx</Value>
+    </Setting>
+    <Setting Name="TCCService_co_com_tcc_clientes_remesas_wsDespachosSoapQSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://clientes.tcc.com.co:1080/api/clientes/remesasws</Value>
+    </Setting>
+    <Setting Name="GUIDE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/guide/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,82 @@
+﻿@model List<Kiosko.Models.CubiQManagerShippingDataModel>
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Resumen retiro.</h4>
+    </div>
+    @{int unidades = 0; }
+    <div class="modal-body">
+    @if (Model.Count != 0)
+    {
+        <table class="table table-bordered dataTable">
+            <thead>
+                <tr role="row">
+                    <th>Tipo paquete</th>
+                    <th>Destino</th>
+                    <th>Codigo</th>
+                    <th>Unidades</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var value in Model)
+            {
+                <tr role="row">
+                    <td>
+                        @value.shipping_type
+                    </td>
+                    <td>
+                      @value.receiver_department_name   @value.receiver_city_name
+
+
+                    </td>
+                    <td>
+
+                        @value.code
+
+                    </td>
+                    <td>
+                       
+                        @{
+                            if (value.Measures != null)
+                            {
+                                unidades += value.Measures.Count;
+                               
+
+                            }
+                            else
+                            {
+                                unidades += 1;
+                                
+
+                            }
+
+
+
+                        }
+                        1
+                      
+                                
+
+                    </td>
+                </tr>
+
+
+            }
+                <tr role="row">
+                    <td></td>
+                    <td></td>
+                    <td>Total Unidades</td>
+                    <td>@unidades</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h4>El Cajon no tiene paquetes en este momento</h4>
+
+    }
+    </div></div>

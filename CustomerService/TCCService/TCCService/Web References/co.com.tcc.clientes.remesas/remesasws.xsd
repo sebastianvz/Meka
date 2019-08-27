@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.tcc.com.co/xsd/remesa/" elementFormDefault="qualified" targetNamespace="http://www.tcc.com.co/xsd/remesa/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="grabardespacho7">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="despacho" type="remesa" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="remesa">
+    <xsd:sequence>
+      <xsd:element name="clave" type="xsd:string" />
+      <xsd:element name="numerorelacion" type="xsd:string" />
+      <xsd:element name="fechahorarelacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="solicitudrecogida" type="recogida" />
+      <xsd:element name="unidadnegocio" type="xsd:string" />
+      <xsd:element name="numeroremesa" type="xsd:string" />
+      <xsd:element name="fechadespacho" type="xsd:string" />
+      <xsd:element name="cuentaremitente" type="xsd:string" />
+      <xsd:element name="tipoidentificacionremitente" type="xsd:string" />
+      <xsd:element name="identificacionremitente" type="xsd:string" />
+      <xsd:element name="sederemitente" type="xsd:string" />
+      <xsd:element name="primernombreremitente" type="xsd:string" />
+      <xsd:element name="segundonombreremitente" type="xsd:string" />
+      <xsd:element name="primerapellidoremitente" type="xsd:string" />
+      <xsd:element name="segundoapellidoremitente" type="xsd:string" />
+      <xsd:element name="razonsocialremitente" type="xsd:string" />
+      <xsd:element name="naturalezaremitente" type="xsd:string" />
+      <xsd:element name="direccionremitente" type="xsd:string" />
+      <xsd:element name="contactoremitente" type="xsd:string" />
+      <xsd:element name="emailremitente" type="xsd:string" />
+      <xsd:element name="telefonoremitente" type="xsd:string" />
+      <xsd:element name="ciudadorigen" type="xsd:string" />
+      <xsd:element name="tipoidentificaciondestinatario" type="xsd:string" />
+      <xsd:element name="identificaciondestinatario" type="xsd:string" />
+      <xsd:element name="sededestinatario" type="xsd:string" />
+      <xsd:element name="primernombredestinatario" type="xsd:string" />
+      <xsd:element name="segundonombredestinatario" type="xsd:string" />
+      <xsd:element name="primerapellidodestinatario" type="xsd:string" />
+      <xsd:element name="segundoapellidodestinatario" type="xsd:string" />
+      <xsd:element name="razonsocialdestinatario" type="xsd:string" />
+      <xsd:element name="naturalezadestinatario" type="xsd:string" />
+      <xsd:element name="direcciondestinatario" type="xsd:string" />
+      <xsd:element name="contactodestinatario" type="xsd:string" />
+      <xsd:element name="emaildestinatario" type="xsd:string" />
+      <xsd:element name="telefonodestinatario" type="xsd:string" />
+      <xsd:element name="ciudaddestinatario" type="xsd:string" />
+      <xsd:element name="barriodestinatario" type="xsd:string" />
+      <xsd:element name="totalpeso" type="xsd:string" />
+      <xsd:element name="totalpesovolumen" type="xsd:string" />
+      <xsd:element name="totalvalormercancia" type="xsd:string" />
+      <xsd:element name="formapago" type="xsd:string" />
+      <xsd:element name="observaciones" type="xsd:string" />
+      <xsd:element name="llevabodega" type="xsd:string" />
+      <xsd:element name="recogebodega" type="xsd:string" />
+      <xsd:element name="centrocostos" type="xsd:string" />
+      <xsd:element name="totalvalorproducto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tiposervicio" type="xsd:string" />
+      <xsd:element maxOccurs="unbounded" name="unidad" type="unidad" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="documentoreferencia" nillable="true" type="documentoreferencia" />
+      <xsd:element minOccurs="0" name="numeroreferenciacliente" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="grabardespacho7respuesta">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="remesa" type="xsd:string" />
+        <xsd:element name="numerorecogida" type="xsd:string" />
+        <xsd:element name="urlrelacionenvio" type="xsd:string" />
+        <xsd:element name="urlremesa" type="xsd:string" />
+        <xsd:element name="urlrotulos" type="xsd:string" />
+        <xsd:element name="respuesta" type="xsd:string" />
+        <xsd:element name="mensaje" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="unidad">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipounidad" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoempaque" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseempaque" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dicecontener" nillable="true" type="xsd:string" />
+      <xsd:element name="kilosreales" type="xsd:string" />
+      <xsd:element minOccurs="0" name="largo" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="alto" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ancho" nillable="true" type="xsd:string" />
+      <xsd:element name="pesovolumen" type="xsd:string" />
+      <xsd:element name="valormercancia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigobarras" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numerobolsa" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referencias" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="unidadesinternas" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="documentoreferencia">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipodocumento" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numerodocumento" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechadocumento" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="recogida">
+    <xsd:annotation>
+      <xsd:documentation>Si el valor de fecha de la recogida es ingresado se da por entendido que se debe generar una solicitud</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="numero" type="xsd:string" />
+      <xsd:element name="fecha" type="xsd:string" />
+      <xsd:element name="ventanainicio" type="xsd:string" />
+      <xsd:element name="ventanafin" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="anulardespacho">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="clave" type="xsd:string" />
+        <xsd:element name="numeroremesa" type="xsd:string" />
+        <xsd:element name="fechadespacho" type="xsd:string" />
+        <xsd:element name="cuentaremitente" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="anulardespachorespuesta">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="respuesta" type="xsd:string" />
+        <xsd:element name="mensaje" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="tpListaRemesa">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="remesa">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="numero" type="xsd:string" />
+            <xsd:element name="esrelacion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="consultartrazabilidadremesa">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="clave" type="xsd:string" />
+        <xsd:element name="remesas" type="tpListaRemesa" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

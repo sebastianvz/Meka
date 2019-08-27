@@ -1,0 +1,129 @@
+﻿
+<div class="modal" tabindex="-1" role="dialog" id="error_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="error_message_modal_title"></h2>
+                <label id="error_message_modal_body"></label>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm " data-dismiss="modal">CERRAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="totalCostError_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="totalCostError_message_modal_title"></h2>
+                <label id="totalCostError_message_modal_body"></label>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm confirm-btn" style="width:250px; height:95px" data-dismiss="modal">REINTENTAR</button>
+                <button type="button" class="btn default-button-sm btn_finish_process" style="background-image: linear-gradient(to right,#cacaca,#cacaca); width:250px !important; height:95px; border: 2px solid white !important" data-dismiss="modal">CANCELAR ENVIO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="withoutMoney_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="withoutMoney_message_modal_title"></h2>
+                <label id="withoutMoney_message_modal_body"></label>
+            </div>
+            <div class="modal-footer" style="justify-content: center; display:grid; grid-gap: 10px">
+                <button type="button" class="btn default-button-sm payment_pos" data-dismiss="modal">Pagar con tarjeta</button> 
+                <button type="button" class="btn default-button-sm payment_cod" data-dismiss="modal">Pagar contra entrega</button>
+                <button type="button" class="btn default-button-sm btn_finish_process" style="background-image: linear-gradient(to right,#cacaca,#cacaca); border: 2px solid white !important; margin:1px" data-dismiss="modal">CANCELAR ENVIO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="exceededValue_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="exceededValue_message_modal_body"></h2>
+                <h4 id="exceededValue_message_modal_title"></h4>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm btn-round " data-dismiss="modal">ENTENDIDO</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_terms_and_conditions">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-info-circle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 style="font-family: 'Open Sans', sans-serif !important;">Al continuar usted acepta los términos y condiciones de uso.</h2>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+
+                <button type="button" accept="false" class="btn accept-terms-and-conditions default-button-sm" data-dismiss="modal" style="border: 2px solid white !important;background-image:linear-gradient(to right,#cacaca,#cacaca)  !important;">Cancelar</button>
+                <button type="button" accept="true" class="btn accept-terms-and-conditions default-button-sm" data-dismiss="modal">Acepto</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="timeCount_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="timeCount_message_modal_title"></h2>
+                <h4 id="timeCount_message_modal_body"></h4>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm" data-dismiss="modal">CONTINUAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="cancel_shipping_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-info-circle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 style="font-family: 'Open Sans', sans-serif !important;">¿Esta seguro de que quiere cancelar el envío?</h2>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+
+                <button type="button" class="btn default-button-sm btn_finish_process" style="font-size:1.5em;"  data-dismiss="modal">SI</button>
+                <button type="button" class="btn default-button-sm" style="font-size:1.5em; background-image: linear-gradient(to right,#cacaca,#cacaca); border: 2px solid white !important" data-dismiss="modal">NO</button>
+            </div>
+        </div>
+    </div>
+</div>

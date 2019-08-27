@@ -1,0 +1,166 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="~/Assets/lib/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/kiosko/css/kiosko.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <title>Kiosko</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header>
+        <div class="container mb-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="display: flex; justify-content: center">
+                        <img class="img-fluid client-logo-big mt-2 mb-2" src="~/Assets/kiosko/img/logo_big.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @Html.Partial("~/Views/Shared/Modal.cshtml")
+    <div id="loader" style="display : none"></div>
+    <main role="main" class="flex-shrink-0">
+        @RenderBody()
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container" id="footer-steps" style="display:none">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div style="display: grid; justify-content: space-between; grid-template-columns:repeat(3,1fr)">
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: left;display: inline-block;display:none" id="footer_retry_all_process">
+                                    <a href="#" class="btn btn_retry_all_process" role="button" aria-disabled="true" style="float:left">
+                                        ¿REALIZAR OTRO ENVÍO?
+                                    </a>
+                                </div>
+                                <div class="col-md-12" style="text-align: left;display: inline-block" id="footer_left">
+                                    <i class="fas fa-arrow-circle-left fa-5x back-button round-button text-uppercase"> </i>
+                                    <h4 class="" id="text_back" style="display:none;color:white;display:inline;position: relative;top: -25%; transform: translateY(50%);">
+                                        ANTERIOR
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:grid">
+
+                            <a href="#" class="btn" data-to-edit="" id="btn_update_data" role="button" aria-disabled="true" style="float:left;display:none;font-size: 30px;">
+                                ACTUALIZAR
+                            </a>
+
+                            <div id="progress_bar" style="display:none;display: table;margin: 0 auto;">
+                                <span class="dot progress_bar" id="progress_bar_1"></span>
+                                <span class="dot progress_bar" id="progress_bar_2"></span>
+                                <span class="dot progress_bar" id="progress_bar_3"></span>
+                                <span class="dot progress_bar" id="progress_bar_4"></span>
+                                <span class="dot progress_bar" id="progress_bar_5"></span>
+                                <span class="dot progress_bar" id="progress_bar_6"></span>
+                                <span class="dot progress_bar" id="progress_bar_7"></span>
+                                <span class="dot progress_bar" id="progress_bar_8" style="margin-right:0px !important"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: right;display: inline-block;" id="footer_right">
+                                    <h4 class="" id="text_next" style="color:white;display:inline;position: relative;top: -25%; transform: translateY(50%);">
+                                        SIGUIENTE
+                                    </h4>
+                                    <i class="fas fa-arrow-circle-right fa-5x continue-button round-button text-uppercase" enabled="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container mt-5" id="footer_customer_info">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div style="display: flex; justify-content: space-between">                     
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center;display: inline-block;" id="footer_right">
+                                    <a href="#" id="triggerPdf" style="color:white;display:inline;position: relative;top: -25%; transform: translateY(50%)">Consulta aquí tratamiento para la prestación de servicios postales.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="col-md-12" id="div_test">
+        <img class="img-fluid" id="logo_vigilado_super" src="~/Assets/kiosko/img/logo_vigilado_superpng.png" />
+    </div>
+
+    <div id="maintenanceImg" class="col-md-12" style="display:none; position:absolute; left:0; bottom:0; padding:0px !important">
+        <img style="height: 1024px; width: 1280px;" src="~/Assets/kiosko/img/_pantalla-organizada-tamaño1280x1024.png" />
+    </div>
+
+    <style>
+        #div_test {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 18%;
+        }
+
+        #logo_vigilado_super {
+            width: 3.5%;
+            display: block;
+            position: absolute;
+        }
+    </style>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $('#triggerPdf').click(function () {
+                $('#modal-body-disable-click').click(false);
+                $("#pdfModal").modal("show");
+            });
+        });
+    </script>
+
+    <script language="javascript" type="text/javascript" src="~/Assets/lib/js/jquery/jquery.js"></script>
+    <script src="~/Assets/lib/js/bootstrap/bootstrap.js"></script>
+
+    <script src="~/Assets/kiosko/js/modules/appConfig.js"></script>
+    <script src="~/Assets/kiosko/js/modules/communication.js"></script>
+    <script src="~/Assets/kiosko/js/modules/custom.js"></script>
+    <script src="~/Assets/kiosko/js/modules/modal.js"></script>
+    <script src="~/Assets/kiosko/js/modules/shipping.js"></script>
+    <script src="~/Assets/kiosko/js/modules/steps.js"></script>
+    <script src="~/Assets/kiosko/js/modules/utilities.js"></script>
+    <script src="~/Assets/kiosko/js/modules/validation.js"></script>
+
+
+    <script src="~/Assets/kiosko/js/test/shippingtest.js"></script>
+    <script src="~/Assets/kiosko/js/test/test.js"></script>
+
+    <script src="~/Assets/kiosko/js/kiosko.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

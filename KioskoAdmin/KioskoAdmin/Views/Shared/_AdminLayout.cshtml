@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@using KioskoAdmin.Models;
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CubiQ Kiosk Admin
+    </title>
+
+    <!-- Custom fonts for this template-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/js/all.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+    <!-- Custom styles for this template-->
+    <link href="~/Assets/kioskoadmin/css/site.css" rel="stylesheet" />
+
+</head>
+
+<body id="page-top">
+    <a id="session_key" value="@Session["SessionKey"].ToString().ToLower()" hidden></a>
+    <a id="session_user_name" value="@Session["UserName"].ToString().ToLower()" hidden></a>
+    <a id="session_user_id" value="@Session["UserId"].ToString().ToLower()" hidden></a>
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">KIOSKO ADMIN</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="font-weight:bold">@Session["UserName"].ToString().ToUpper()</span>
+
+                                <i class="fas fa-user img-profile rounded-circle"></i>
+                                <i class="fas fa-power-off img-profile rounded-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Kiosko</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    @Html.Partial("~/Views/Shared/_Modal.cshtml")
+    @Html.Partial("~/Views/Shared/EmptyModal.cshtml")
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="~/Assets/kioskoadmin/js/app/modules/communication.js"></script>
+    <script src="~/Assets/kioskoadmin/js/app/modules/modal.js"></script>
+    <script src="~/Assets/kioskoadmin/js/app/modules/utilities.js"></script>
+    <script src="~/Assets/kioskoadmin/js/app/kioskoadmin.js"></script>
+
+</body>
+
+</html>

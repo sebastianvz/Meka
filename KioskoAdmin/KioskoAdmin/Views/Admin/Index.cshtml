@@ -1,0 +1,123 @@
+﻿@using KioskoAdmin.Models;
+
+@model IEnumerable<KioskoAdmin.Models.AdminViewModel.Cards>
+<p>Seleccione una acción</p>
+
+<div class="row">
+
+@foreach (var card2 in (IEnumerable<Kiosko.Models.Common.ServiceStatus>)ViewData["Devices"])
+{
+    <div class="col-md-4 mb-4">
+        <div class="card" style="width: 100%">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">@card2.DeviceName</h5>
+                        <p class="card-text"></p>
+                      
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered " style="margin-top:5px">
+                            <thead>
+                                <tr role="row">
+                                    <th>Denominacion</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            @{ var inventario= (List<Kiosko.Models.InventarioCash.Efectivo>)ViewData["Inventario"];   }
+
+                            @foreach (var inv in inventario.Where(c=>c.Location == card2.DeviceName))
+                            {
+
+                            <tr role = "row" >
+                                <td>$ @inv.Value</td>
+                                <td>@inv.Inventory</td>
+                            </tr>
+
+
+                            }
+                        </table>
+
+                    </div>
+                   
+
+
+                </div>
+
+
+            </div>
+            <div class="col-md-5">
+                @if (!card2.error.HasError)
+                {
+
+                    <a href="#" class="btn btn-success btn-circle" id=" @card2.DeviceName "><i class="fas fa-check"></i></a>
+                }
+                else
+                {
+                    <a href="#" class="btn  btn-warning btn-circle" id=" @card2.DeviceName "><i class="fas fa-exclamation-triangle"></i></a>
+
+                }
+
+                @switch (card2.DeviceName)
+                {
+                    case "F56":
+                        <a  data-targeturl="@Url.Action("Details","Admin",new { device = card2.DeviceName, operation="sumar" })" href="#" class="btn btn-success btn-icon-split modal-link" id="@card2.DeviceName">
+                            <span><i class="fas fa-2x fa-plus-circle"></i></span>
+                            <span class="text">Ingresar Dinero</span>
+                        </a>
+                        break;
+
+                    case "SMARTHOPPER":
+                        <a href="#" data-targeturl="@Url.Action("Details","Admin",new { device = card2.DeviceName, operation="sumar" })" class="btn btn-success btn-icon-split modal-link" style="margin:2px;" id="@card2.DeviceName">
+                            <span><i class="fas fa-2x fa-plus-circle"></i></span>
+                            <span class="text">Ingresar Dinero</span>
+                        </a>
+                       
+                        break;
+                    case "JCM":
+                            <a data-targeturl="@Url.Action("Details","Admin",new { device = card2.DeviceName, operation="restar" })" href="#" class="btn btn-success btn-icon-split modal-link" style="margin:2px;" id="@card2.DeviceName">
+                            <span><i class="fas fa-2x fa-minus-circle"></i></span>
+                            <span class="text">Retirar Dinero</span></a>
+                            break;
+
+
+                            }
+</div>
+            </div>
+    </div>
+
+
+}
+
+</div>
+<p>Seleccione una acción</p>
+    <div class="row">
+        @foreach (var card in (IEnumerable<AdminViewModel.Cards>)ViewData["AdminCards"])
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%">
+                    <div class="card-body">
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" data-targeturl="@Url.Action("RemoveBoxes","Admin")" class="btn btn-primary @card.Class" id=" @card.Action "><i class="fas fa-2x fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+
+
+'<div id="modal-container" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+       
+       <div class="modal-content" id="modalbody">
+          
+        </div>
+    </div>
+</div>'

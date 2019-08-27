@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosko</title>
+    <link href="~/Assets/lib/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/kiosko/css/kiosko.css" rel="stylesheet" />
+    <link href="~/Assets/lib/fontawesome/all.css" rel="stylesheet" />
+    <script src="~/Assets/lib/fontawesome/all.js"></script>
+    <link href="~/Assets/lib/animate.min.css" rel="stylesheet" />
+
+</head>
+<body class="d-flex flex-column h-100 mt-7">
+
+    <div id="loader" style="display : none"></div>
+    <main role="main" class="flex-shrink-0">
+        @RenderBody()
+    </main>
+
+    @Html.Partial("~/Views/Shared/Modal.cshtml")
+
+<footer id="footerTCC" class="footer mt-auto" style="display:none">
+    <div class="container" style="display:grid">
+        <a href="#" class="btn" data-to-edit="" id="btn_update_data" role="button" aria-disabled="true" style="float:left;display:none;font-size: 30px; width: 50%; position: absolute; right: 25%">
+            ACTUALIZAR
+        </a>
+    </div>   
+</footer>
+
+    <script src="~/Assets/lib/js/jquery/jquery.js"></script>
+    <script src="~/Assets/lib/js/bootstrap/bootstrap.js"></script>
+
+    <script src="~/Assets/kiosko/js/modules/appConfig.js"></script>
+    <script src="~/Assets/kiosko/js/modules/communication.js"></script>
+    <script src="~/Assets/kiosko/js/modules/custom.js"></script>
+    <script src="~/Assets/kiosko/js/modules/modal.js"></script>
+    <script src="~/Assets/kiosko/js/modules/shipping.js"></script>
+    <script src="~/Assets/kiosko/js/modules/steps.js"></script>
+    <script src="~/Assets/kiosko/js/modules/utilities.js"></script>
+    <script src="~/Assets/kiosko/js/modules/validation.js"></script>
+
+
+    <script src="~/Assets/kiosko/js/test/shippingtest.js"></script>
+    <script src="~/Assets/kiosko/js/test/test.js"></script>
+
+    <script src="~/Assets/kiosko/js/kiosko.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

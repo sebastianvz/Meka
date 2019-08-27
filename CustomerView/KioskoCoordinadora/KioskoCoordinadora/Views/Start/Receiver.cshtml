@@ -1,0 +1,85 @@
+﻿
+<style>
+</style>
+<div class="receiver" style="display:none">
+    <div class="row align-content-center" align="center">
+        <!-- RECEIVER -->
+        <div class="col-sm-12">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#" class="btn cancel-process-button" role="button" aria-disabled="true" style="float:left">
+                        <i class="fas fa-times"></i> CANCELAR PROCESO
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+
+            <div class="row">
+
+                <div class="col-sm-12 mt-3">
+                    <h4 class="step-title mt-2" style="text-align:center"> Información del destinatario </h4>
+                </div>
+
+            </div>
+        </div>
+
+        <form id="receiver_form">
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> PERSONA / EMPRESA </h5>
+                        <input type="text" class="form-control input-xs" name="receiver_name" id="receiver_name" placeholder="A quién va dirigido el envio" autofocus required>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> IDENTIFICACIÓN </h5>
+                        <input class="form-control input-xs input-onlynumberAndDash" name="receiver_identification_number" id="receiver_identification_number" placeholder="Cédula / NIT" required>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> DEPARTAMENTO </h5>
+                        <select class="form-control input-xxs department_list" id="receiver_department" name="receiver_department" required style="text-align-last:center;width: 20em !important;">
+                            <option selected disabled>Seleccione el departamento</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> CIUDAD </h5>
+                        <select class="form-control input-xxs ml-4 mr-1" id="receiver_city" name="receiver_city" required style="text-align-last:center;">
+                            <option selected disabled>Seleccione la ciudad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> TELÉFONO </h5>
+                        <input type="number" class="form-control input-xxs input-onlynumber" name="receiver_phone" id="receiver_phone" placeholder="Celular o fijo" required>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> DIRECCIÓN </h5>
+                        <input type="text" class="form-control input-xs " name="receiver_address" id="receiver_address" placeholder="Dirección completa a quién va dirigido el envio" required>
+
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> CONFIRME LA DIRECCIÓN </h5>
+                        <input type="text" class="form-control input-xs" name="receiver_address_copy" placeholder="Verifique que la dirección ingresada sea correcta">
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

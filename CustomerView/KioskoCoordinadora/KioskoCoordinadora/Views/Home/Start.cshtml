@@ -1,0 +1,74 @@
+﻿
+
+<div id="loader" style="display : none"></div>
+
+<div class="start" style="margin-top: 3em;">
+    <div class="container">
+        @Html.Partial("~/Views/Start/Origin.cshtml")
+        @Html.Partial("~/Views/Start/Receiver.cshtml")
+        @Html.Partial("~/Views/Start/Content.cshtml")
+        @Html.Partial("~/Views/Start/Cubiq.cshtml")
+        @Html.Partial("~/Views/Start/Resume.cshtml")
+        @Html.Partial("~/Views/Start/Print.cshtml")
+        @Html.Partial("~/Views/Start/OpenDoor.cshtml")
+        @Html.Partial("~/Views/Start/Finish.cshtml")
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="error_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="    transform: translate(-50%, -70%) !important;">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="error_message_modal_title"></h2>
+                <label style="font-size:1.5em" id="error_message_modal_body"></label>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm " data-dismiss="modal" style="background-color:#00397c;color:white">ENTENDIDO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="confirmation_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h4>¡Atención!</h4>
+                <p>
+                    El proceso finalizará y toda la información guardada será borrada. ¿Desea salir?
+                </p>
+            </div>
+            <div class="modal-footer" style="justify-content: center">
+                <button type="button" class="btn btn-primary btn-round" id="btn_finish_process">SI</button>
+                <button type="button" class="btn btn-primary btn-round" data-dismiss="modal">NO </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="start_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h4 id="message_modal_title"></h4>
+                <p id="message_modal_message">El servicio no se encuentra disponible actualmente.</p>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="message_modal_button">Reintentar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,45 @@
+﻿<style>
+    .finish_title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        color: grey;
+        font-size: 4em;
+    }
+
+    .finish_text-sm {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.9em;
+        color: grey;
+    }
+
+    .finish_text-md {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: #d52113;
+    }
+</style>
+
+<div class="finish" style="display:none">
+    <div class="row justify-content-center" align="center">
+        <div class="col-sm-12 mt-5">
+            <div class="card text-center" style="width: 50rem;">
+                <div class="card-body" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="finish_title">¡Su envio finalizó exitosamente!</h1>
+                            <br />
+                            <p class="finish_text-sm" id="finish_process_resume_1"></p>
+                            <p class="finish_text-sm" id="finish_process_resume_2"></p>
+                            <p class="finish_text-sm" id="finish_process_resume_3"></p>
+                            <br />
+                            <h4 class="finish_text-md" id="btn_finish_process">FINALIZAR PROCESO</h4>
+                            <br />
+                            <p class="finish_text-sm"> <i class="fas fa-info-circle" style="color:#d52113"></i>El proceso finalizará automáticamente en <label style="color:#d52113" id="timer"></label> segundos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

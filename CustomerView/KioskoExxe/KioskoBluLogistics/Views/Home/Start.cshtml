@@ -1,0 +1,61 @@
+﻿<style>
+    body {
+        height: 100%;
+        background-color: white !important;
+        background-image: none !important;
+        font-family: "Arial Black", Gadget, sans-serif; /**Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;*/
+    }
+</style>
+
+
+
+<div class="st-header">
+    <div class="d-flex justify-content-center">
+        <img class="logo-header img-fluid" src="~/Assets/kiosko/img/logo_back.png" />
+    </div>
+
+</div>
+
+<div class="start" style="margin-top: 2em;">
+    <div class="container">
+        @Html.Partial("~/Views/Start/Origin.cshtml")
+        @Html.Partial("~/Views/Start/Receiver.cshtml")
+        @Html.Partial("~/Views/Start/Content.cshtml")
+        @Html.Partial("~/Views/Start/Cubiq.cshtml")
+        @Html.Partial("~/Views/Start/Resume.cshtml")
+        @Html.Partial("~/Views/Start/End.cshtml")
+        @Html.Partial("~/Views/Start/Finish.cshtml")
+        @Html.Partial("~/Views/Start/OpenDoor.cshtml")
+        @Html.Partial("~/Views/Start/Print.cshtml")
+
+    </div>
+</div>
+
+
+<style>
+
+    .logo-header {
+        height: 80px;
+    }
+
+    .st-header {
+        background-color: #0e5aa4;
+        height: 8%;
+    }
+
+    .st-footer {
+        background-color: #0e5aa4;
+        height: 100%;
+    }
+</style>
+
+<div class="st-footer">
+    <div class="d-flex justify-content-center">    
+        <span class="align-self-end p-2 bd-highlight" style="color:white; vertical-align:bottom">DEL GRUPO</span>   
+        <img src="~/Assets/kiosko/img/BluBack.png" style="height:50px;" id="test_act" />
+    </div>
+</div>
+
+
+
+

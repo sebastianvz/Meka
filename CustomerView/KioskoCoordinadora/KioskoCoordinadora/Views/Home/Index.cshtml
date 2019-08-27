@@ -1,0 +1,178 @@
+﻿<style>
+
+    nav ul {
+        height: 700px;
+        width: 100%;
+    }
+
+    nav ul {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #div_test {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 18%;
+    }
+
+    #logo_vigilado_super {
+        width: 3.5%;
+        display: block;
+        position: absolute;
+    }
+
+</style>
+
+<div class="welcome">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-5" style=" display: flex; flex-direction:column; margin-top: 15rem !important;">
+
+                        <img class="img-fluid" id="" src="~/Assets/kiosko/img/drop_logo_desc.png" />
+
+                    </div>
+
+                    <div class="col-md-1 mt-5">
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="col-md-6 mt-5">
+                        <div class="row mt-5 ">
+                            <div class="col-md-12 ">
+                                <p class="welcome-text-info">
+                                    Bienvenidos al primer módulo de autoservicio de envíos del país.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-12 ">
+                                <p class="welcome-text-info">
+                                    Advertencia:
+                                </p>
+                                <div class="alert alert-warning-custom" role="alert" id="view_not_transportable_content">
+                                    <p style="font-size: 1em">
+                                        Recuerda que por este medio solo se envían sobres, paquetes y mercancías hasta 5 kilos.
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row mt-5">
+
+                            <div class="col-md-12">
+                                <div class="round">
+                                    <input type="checkbox" element="origin_info" id="checkbox_autocomplete_origin" checked />
+                                    <label for="checkbox_autocomplete_origin" style="color:white"></label>
+                                    <span style="color:white; margin-left:1.2em; vertical-align:text-top">Acepto términos y condiciones</span>
+                                </div> 
+
+                                <a href="#" class="btn welcome-button mt-5" role="button" aria-disabled="true">
+                                    COMENZAR<i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="start_message_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h4 id="message_modal_title"></h4>
+                <p id="message_modal_message">El servicio no se encuentra disponible actualmente.</p>
+                <p id="message_modal_message">Estamos trabajando para prestarle un mejor servicio. Puede contactarse a nuestra línea de atención 018000520555</p>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="message_modal_button">Reintentar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="not_transportable_content_modal" style="margin-top:0px">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c;    justify-content: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 style="color:white">Listado de mercancias no transportables</h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <p style="color:white">Coordinadora transporta todo tipo de bienes y mercancías, a excepción de:</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <ul class="list-group" style="height: 670px;">
+                        <li class="list-group-item"> Mercancías mal empacadas. </li>
+
+                        <li class="list-group-item"> Mercancías de contrabando, restringidas o controladas por las autoridades. </li>
+
+                        <li class="list-group-item"> Productos químicos inflamables, corrosivos o tóxicos, puesto que estos pueden representar peligro para los demás envíos. </li>
+
+                        <li class="list-group-item"> Alimentos perecederos. </li>
+
+                        <li class="list-group-item"> Cristalería, cerámica, yeso y mármol. </li>
+
+                        <li class="list-group-item"> Vidrio que no esté enguacalado y empacado en posición de filo. </li>
+
+                        <li class="list-group-item"> Muebles armados. </li>
+
+                        <li class="list-group-item"> Tabaco y bebidas alcohólicas. </li>
+
+                        <li class="list-group-item"> Obras de arte. </li>
+
+                        <li class="list-group-item"> Plantas naturales. </li>
+
+                        <li class="list-group-item"> Almohadas, colchones, cojines. </li>
+
+                        <li class="list-group-item"> Electrodomésticos que no se encuentren en su empaque original: “Línea Blanca, estufas, neveras, lavadoras, refrigeradores, secadoras, hornos y similares por lo delicado de su estructura que puedan deformarse con el contacto con otras unidades”. </li>
+
+                        <li class="list-group-item"> Ancho de 2 metros y 4 metros de largo. </li>
+
+                        <li class="list-group-item"> Mercancía empacada con cabuya o cuerda. </li>
+
+                        <li class="list-group-item"> Líos (dos o más unidades unidas con suncho y cinta). </li>
+
+                        <li class="list-group-item"> Pipetas ( de gas, de oxígeno, ni llenas ni vacías). </li>
+
+                        <li class="list-group-item"> Armas, explosivos. </li>
+
+                        <li class="list-group-item"> Narcóticos en general. </li>
+
+                        <li class="list-group-item"> Aparatos eléctricos o electrónicos de alta precisión. </li>
+
+                        <li class="list-group-item"> Valores como joyas, cheques o dinero, en despachos nacionales. </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-primary btn-round" data-dismiss="modal" id="message_modal_button">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" id="div_test">
+    <img class="img-fluid" id="logo_vigilado_super" src="~/Assets/kiosko/img/logo_vigilado_superpng.png" />
+</div>
+

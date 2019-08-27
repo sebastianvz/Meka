@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.tcc.com.co/xsd" elementFormDefault="qualified" targetNamespace="http://www.tcc.com.co/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="tpRespuesta">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:string" />
+      <xsd:element name="mensaje" type="xsd:string" />
+      <xsd:element name="codigointerno" type="xsd:string" />
+      <xsd:element name="mensajeinterno" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpAuditoria">
+    <xsd:sequence>
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="fechaactivacion" type="xsd:dateTime" />
+      <xsd:element name="fechainactivacion" type="xsd:dateTime" />
+      <xsd:element name="fechamodificacion" type="xsd:dateTime" />
+      <xsd:element name="usuario" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpAuditoriaV1">
+    <xsd:sequence>
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="fechaactivacion" type="xsd:string" />
+      <xsd:element name="fechainactivacion" type="xsd:string" />
+      <xsd:element name="fechamodificacion" type="xsd:string" />
+      <xsd:element name="usuario" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpAuditoriaBasico">
+    <xsd:sequence>
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="usuario" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpPaginacion">
+    <xsd:sequence>
+      <xsd:element name="idconsulta" type="xsd:string" />
+      <xsd:element name="usuario" type="xsd:string" />
+      <xsd:element name="paginainicio" type="xsd:string" />
+      <xsd:element name="paginafin" type="xsd:string" />
+      <xsd:element name="columna" type="xsd:string" />
+      <xsd:element name="orden" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpCabecera">
+    <xsd:sequence>
+      <xsd:element name="aplicacionorigen" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpAcceso">
+    <xsd:sequence>
+      <xsd:element name="usuario" type="xsd:string" />
+      <xsd:element name="contrasena" type="xsd:string" />
+      <xsd:element name="aplicacion" type="xsd:string" />
+      <xsd:element name="terminal" type="xsd:string" />
+      <xsd:element name="transaccion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="cabecera" type="tpCabecera" />
+  <xsd:element name="comprimirarchivo">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="rutaarchivo" type="xsd:string" />
+        <xsd:element name="nombrearchivo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="comprimirarchivorespuesta">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="rutaarchivocomprimido" type="xsd:string" />
+        <xsd:element name="respuesta" type="tpRespuesta" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="crearlogconsumo">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="usuario" type="xsd:string" />
+        <xsd:element name="fechaconsumo" type="xsd:string" />
+        <xsd:element name="observacion" type="xsd:string" />
+        <xsd:element name="usuarioejecuta" type="xsd:string" />
+        <xsd:element name="tipooperacion" type="xsd:string" />
+        <xsd:element name="idoperacion" type="xsd:string" />
+        <xsd:element name="valores" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="crearlogconsumorespuesta">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="respuesta" type="tpRespuesta" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

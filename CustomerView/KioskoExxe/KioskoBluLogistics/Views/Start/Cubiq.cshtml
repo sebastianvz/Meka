@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<style>
+
+    td {
+        text-align: center !important;
+        font-size:1.1em;
+    }
+</style>
+
+<div class="cubiq" style="display:none">
+    <div class="row justify-content-center text-center">
+        <div class="col-sm-12">
+            <h2 class="step-title">CUBICACIÓN</h2>
+            <hr />
+            <br />
+        </div>
+    </div>
+    <form id="cubiq_form">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img style="border:5px solid #0e5aa4"id="current_cubiq_image" class="responsive" src="~/Assets/kiosko/img/default_box.png" alt="">
+                    <div class="card-body" style="background-color:#0e5aa4;">
+                        <div style="display: flex; justify-content: space-between">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <label style="font-size:1.5em; color:#0e5aa4;">Ubique su paquete en la báscula</label>
+                <table>
+                    <tr>
+                        <td>ALTO</td>
+                        <td>ANCHO</td>
+                        <td>LARGO</td>
+                        <td>VOLÚMEN</td>
+                        <td>PESO</td>
+                    </tr>
+                    <tr>
+                        <td id="measure_height"></td>
+                        <td id="measure_width"></td>
+                        <td id="measure_length"></td>
+                        <td id="measure_volumetric_weight"></td>
+                        <td id="measure_weight"></td>
+                    </tr>
+                </table>
+                <br />
+                <a href="#" class="btn btn-get-measures mt-2" id="btn_get_measures" role="button" aria-disabled="true">
+                    Presione aquí para tomar las medidas y peso
+                </a>
+
+                <a href="#" class="btn continue-button btn-get-measures mt-2" id="btn_continue_measures" role="button" aria-disabled="true" style="display:none">
+                    Continuar
+                </a>
+
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="card">
+                    <img id="current_cubiq_image" class="responsive" src="~/Assets/kiosko/img/cubiq_help_01.png" alt="">
+                    <div class="card-body" style="background-color:#0e5aa4;">
+                        <div style="display: flex; justify-content: space-between">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

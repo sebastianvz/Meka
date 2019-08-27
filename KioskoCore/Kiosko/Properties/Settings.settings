@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Kiosko.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KIOSKO_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/</Value>
+    </Setting>
+    <Setting Name="CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/configuration.json</Value>
+    </Setting>
+    <Setting Name="F56_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/cash.json</Value>
+    </Setting>
+    <Setting Name="JCM_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/jcm.json</Value>
+    </Setting>
+    <Setting Name="PAYMENT_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/</Value>
+    </Setting>
+    <Setting Name="INVENTORY_CONFIG_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/inventory.json</Value>
+    </Setting>
+    <Setting Name="GUIDE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/guide/</Value>
+    </Setting>
+    <Setting Name="DOOR_LOCKER_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/doorlocker.json</Value>
+    </Setting>
+    <Setting Name="INVOICE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/invoice/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

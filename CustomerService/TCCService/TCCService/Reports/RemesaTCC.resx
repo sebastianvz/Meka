@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGcAAABGCAYAAADRsYpqAAAABGdBTUEAAQHpSiph5wAAAvVpQ0NQUGhv
+        dG9zaG9wIElDQyBwcm9maWxlAAA4y2NgYJ7g6OLkyiTAwFBQVFLkHuQYGREZpcB+noGNgZkBDBKTiwsc
+        AwJ8QOy8/LxUBgzw7RoDI4i+rAsyi4E0wJoMtBhIHwBio5TU4mQg/QWI08tLCoDijDFAtkhSNphdAGJn
+        hwQ5A9ktDAxMPCWpFSC9DM75BZVFmekZJQqGlpaWCo4p+UmpCsGVxSWpucUKnnnJ+UUF+UWJJakpQLVQ
+        O0CA1yW/RME9MTNPwdBUlYHKABSO6OGDEEOA5NKiMggLrEiAQYvBj6GSYRXDA0ZpxijGeYxPmQyZGpgu
+        MWswNzLfZbFhmcfKzJrNepXNiW0Tuwr7TA4Bjk5OVs5mLmauNm5u7ok8UjxLeY15D/EF8z3jrxYQElgt
+        6Cb4SKhRWFH4sEi6KK/oVrE4cU7xrRIpksKSR6UqpHWln8jMkQ2VE5Q7K9+j4KPIq3hBaYpylIqSymvV
+        rWqN6n4ashpvNfdpTdRO1bHWFdJ9pXdEf75BjWGUkaWxpPFvk3umh81WmPdbVFgmWvlYW9io2orYsdh9
+        tX/ucNvxgtMx570uW13Xu610X+qxyHOh1wLvhT6LfZf5rfJfH7A1cG/QseDzIbdCn4V9iWCKFIxSijaO
+        cYuNisuLb0mYnbg56Wzy81SmNLl0m4yozKqsWdl7cu7lMeWrF/gUFhfNLj5c8rZMotylorByXtXZ6r+1
+        enXx9ZMajjX+bjZoSW+d13a9Q7DTu6u9+3AvQ599f92EfRP/T3ac0jr1xHTeGcEzZ816NEdrbsm8fQu4
+        FoYtWrz441KHZROWP1xpvKp19c21uuua1t/caLCpY/ODrVbbpm7/sNN316o9HHvT9x0/oH6w89DrI35H
+        Nx8XP1F78slp7zNbzsmeb7/w6VLc5VNXLa4tuyF6s/XW1zvpd2/e93lw4JHp49VPFZ/NfCH4sus185u6
+        tz/fl3749Kng87uved/e/cj/+eF38Z9v/6r+/wcAKr8dihjIJhAAAAAJcEhZcwAACxMAAAsTAQCanBgA
+        ABEeSURBVHhe7Z0J+E3FG8dFi5KUFoRU0iJSCAlFyVKPdipLaaeHJCkV0kZ7aaHF0kJRPYp2hRYq7bJl
+        ad+QFtrD/P+fec57e+/5zdzfveec+/td1fd53if3/GbmzJl35p13m6mM+Q8Fi42COevXrzcff/yxmTFj
+        hnn66act3XrrreaYY44xbdu2NW3atDGtW7e2xL8PP/xw0759e3PGGWeYyZMn2/LPPfecmTt3rlm1alXQ
+        auGj4Jjz888/mzfffNPccccd5oILLjB77LGHqVKliilTpoyTKlasaHbffXdTt25ds++++5ratWub7bff
+        3lkW2mKLLcxuu+1mmjZtahn80EMPmU8//dT88ccfQQ8KBwXBnIULF5oRI0aYY4891pQvXz41kNtuu61p
+        0aKFufDCC83VV19tHnjgATvzYeCvv/5qfv/996CFovjrr7/Mb7/9Zn755Rdb/plnnjHXX3+9ueyyy+yK
+        22mnnUzZsmVT76patao577zzzMMPP2y++uqroJXSRakx59133zWXX3652WeffVIDxOy/5JJLzKOPPmpW
+        rlwZlPwbS5YssfXefvttu7Ioe+mll5o+ffqYc88915x99tl2gC+66CIzaNAgM3z4cPPyyy+bd955xyxY
+        sMAySWPdunVW3N18882mWbNmZtNNN031pWPHjmbUqFHmiy++CEqXPEqUOczi++67z+y///52AMqVK2cO
+        O+ww89hjj6XN1h9//NE8+eSTdqYfeuihVgTVqlUrNXBRabvttjMHHHCAXY3nn3++efzxx81HH30UvNVY
+        0ca+1qNHD7PDDjvYOptttpk56aSTzKxZs4JSJYcSYQ5Muf3221N7R7169cyECRPsc4CIevbZZ+0ew35Q
+        qVKltEHNJyHadt11V9O1a1c7cX766SfbJzB9+nRz1FFHpcqibPCspJBX5iD3R48ebeU5H4esnz9/fvBX
+        Y6ZNm2ZOOOEEs/XWW6cGoLRpyy23tFofk+mbb76x/Vy9erXd9ypUqGDLHHLIIVZc5ht5Y85rr71mGjVq
+        ZD/mxBNPtBoRWLp0qRk6dKhdIXpQCpE22WQTO3n4FoACwh63+eab27/3798/r6p54sxBbl9xxRW286i2
+        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
+        5wfG/A88u8T2DCAmQgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="xrLabel44.Text" xml:space="preserve">
+    <value>EL CONTRATO DE TRANSPORTE SE RIGE POR LOS TERMINOS DEL CODIGO DE COMERCIO, EN ESPECIAL POR LO CONSAGRADO EN LOS ARTICULOS 1008, 1009, 1010.1011.1027, 1028 DEL CODIGO DE COMERCIO COLOMBIANO. EL LIMITE DE RESPONSABILIDAD DEL TRANSPORTADOR SERA IGUAL AL VALOR DECLARADO POR EL REMITENTE PARA LA CARGA AFECTADA, DE ACUERDO CON EL CODIGO DE COMERCIO. SERAN RESPONSABLES SOLIDARIAMENTE REMITENTE Y DESTINATARIO POR EL PAGO DE LOS FLETES GENERADOS POR ESTE CONTRATO DE TRANSPORTE. ** LAS UNIDADES LOGISTICAS CORRESPONDE A LA SUMA DE PAQUETES Y BOOMERANGS QUE COMPONEN EL DESPACHO. EN CASO DE RETRASO EN RECLAMAR LA MERCANCIA SE INCURRE EN COSTOS DE BODEGAJE.
+</value>
+  </data>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

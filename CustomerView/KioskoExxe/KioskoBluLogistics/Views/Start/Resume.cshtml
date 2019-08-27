@@ -1,0 +1,183 @@
+﻿@{
+    Layout = null;
+}
+
+
+<style>
+    th, td {
+        text-align: center !important;
+    }
+</style>
+<div class="resume" style="display:none">
+    <div class="row justify-content-center text-center">
+        <div class="col-sm-12">
+            <h2 class="step-title" id="resume_title">RESUMEN DE ENVIO</h2>
+            <hr />
+        </div>
+    </div>
+    <form id="resume_form">
+        <div class="row justify-content-center" id="resume_1">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        INFORMACIÓN REMITENTE
+                    </div>
+                    <ul class="list-group list-group-flush" id="resume_origin_info"></ul>
+                </div>
+            </div>
+            <br />
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        INFORMACIÓN DESTINATARIO
+                    </div>
+                    <ul class="list-group list-group-flush" id="resume_receiver_info"></ul>
+                </div>
+            </div>
+
+            <br />
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-header text-center">
+                        INFORMACIÓN ADICIONAL
+                    </div>
+                    <ul class="list-group list-group-flush" id="resume_content_info">
+                        <li class="list-group-item">VALOR DECLARADO</li>
+                        <li class="list-group-item">OBSERVACIONES</li>
+                    </ul>
+                </div>
+            </div>
+
+            <br />
+            <div class="col-md-12 text-center mt-4">
+                <button class="confirm-btn btn btn-primary" style="font-size:30px;" type="button">CONFIRMAR</button>
+          
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="resume_2" style="display:none">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">ALTO</th>
+                            <th scope="col">ANCHO</th>
+                            <th scope="col">LARGO</th>
+                            <th scope="col">VOLÚMEN</th>
+                            <th scope="col">PESO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resume_measure_table">
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4">
+                <table class="table" id="resume_cost_table"></table>
+            </div>
+            <div class="col-md-12 text-center mt-4">
+                <button class="btn btn-primary" style="font-size:30px;" type="button" id="btn_do_payment">REALIZAR PAGO</button>
+                <button class="edit-btn btn btn-light" id="cancel_shipping" style="font-size:30px;" type="button">CANCELAR ENVIO</button>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment_type">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#0e5aa4;    justify-content: center;">
+                <h4 style="color:white;">SELECCIONE LA FORMA DE PAGO</h4>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn default-button-sm " id="origin_payment" data-dismiss="modal">CONTADO EN ORIGEN</button>
+                <br />
+                <br />
+                @*<button type="button" class="btn default-button-sm " id="receiver_payment" data-dismiss="modal">PAGO CONTRA ENTREGA</button>*@
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-light" data-dismiss="modal">CERRAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment">
+    <div class="modal-dialog modal-dialog-centered modal-center-cs" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#0e5aa4;justify-content: center;">
+                <h5 class="modal-title" id="modal_payment_title" style="color:white"></h5>
+            </div>
+            <div class="modal-body" id="modal_payment_body">
+
+            </div>
+            <div class="modal-footer" style="justify-content:center">
+                <a href="#" class="btn btn-round-pulse-sm" data-dismiss="modal" id="modal_payment_status" role="button" style="font-size: 1.5em;color:#00397c !important" aria-disabled="true">
+                    Verificando pago <label id="modal_payment_status_timeout" style="display:none; color:#0e5aa4"></label> <i class="far fa-clock ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment_type_1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#0e5aa4;    justify-content: center;">
+                <h4 style="color:white;">SELECCIONE EL MEDIO DE PAGO</h4>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn default-button-sm" id ="payment_cash" data-dismiss="modal">EFECTIVO</button>
+                <br />
+                <br />
+                <button type="button" class="btn default-button-sm" id="payment_pos" data-dismiss="modal">TARJETA CRÉDITO / DÉBITO</button>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-light" data-dismiss="modal">CERRAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment_pos_process">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#0e5aa4;    justify-content: center;">
+                <h4 style="color:white;">INGRESE SU TARJETA Y SIGA LAS INSTRUCCIONES</h4>
+            </div>
+            <div class="modal-body" id="modal_payment_pos_process_message">
+                <h4 style="color:#0e5aa4">Procesando pago...</h4>
+                <i id="payment_clock" style="color:red" class="fas fa-clock fa-4x "></i>                
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_resume_finish">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <h4 style="color:white;">GUIA GENERADA EXITOSAMENTE</h4>
+            </div>
+            <div class="modal-body" id="modal_resume_finish_message">
+
+            </div>
+
+            <h4 style="font-weight: bold;">Gracias por usar nuestro servicio.</h4>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" id="finish_process" class="btn default-button-sm" data-dismiss="modal">FINALIZAR PROCESO</button>
+            </div>
+        </div>
+    </div>
+</div>

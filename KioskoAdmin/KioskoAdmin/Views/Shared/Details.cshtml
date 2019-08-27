@@ -1,0 +1,87 @@
+﻿@model  Kiosko.Models.InventarioCash.EfectivoViewModel
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Movimiento efectivo.</h4>
+    </div>
+    <div class="modal-body">
+
+        <h4>@Model.efectivo.FirstOrDefault().Location</h4>
+      
+        <p>Favor ingresar la cantidad de dinero a depositar. (adicion)</p>
+
+    </div>
+@using (Html.BeginForm("Cash", "Admin", FormMethod.Post, new { id = "cash_handling" }))
+{
+    <div class="col-lg-7">
+        <div class="p-5">
+             
+            <input type="hidden" value="@Model.operacion" name="operacion"  />
+          
+                @for (var i=0;  i< Model.efectivo.Count;  i++)
+                {
+                    Html.TextBoxFor(m => m.operacion);
+
+
+                <div class="form-group row">
+                    <div class="col-lg-7">
+                        <div class="h5  font-weight-bold text-gray-800">Cantidad</div>
+
+
+                            @Html.HiddenFor(m => m.efectivo[i].Value)
+                            @Html.HiddenFor(m => m.efectivo[i].Location)
+                            @Html.HiddenFor(m => m.efectivo[i].Type)
+                          
+                        <span>$@Model.efectivo[i].Value</span>
+
+                        @if (Model.efectivo[i].Location == "JCM")
+                        {
+                            @Html.HiddenFor(m => m.efectivo[i].Inventory)
+                            @Html.TextBoxFor(m => m.efectivo[i].Inventory, new { data_bind = "value: Name", @class = "form-control form-control-user", @Value = Model.efectivo[i].Inventory, disabled = "disabled" })
+                        }
+                        else
+                        {
+
+                            @Html.TextBoxFor(m => m.efectivo[i].Inventory, new { data_bind = "value: Name", @class = "form-control form-control-user", @Value = "0" })
+                        }
+                          
+                           
+                        </div>
+
+
+                    </div>
+
+                    }
+
+
+
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" id="btnsubmit" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+}
+</div>
+<script>
+   
+
+   
+    $('#cash_handling form').submit(function (event) {
+        event.preventDefault();
+    });
+
+    $('form').preventDoubleSubmission();
+
+    $('form').submit(function () {
+        $(this).find(':submit').attr('disabled', 'disabled');
+    });
+
+
+  
+</script>

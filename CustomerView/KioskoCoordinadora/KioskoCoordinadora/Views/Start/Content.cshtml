@@ -1,0 +1,63 @@
+﻿
+<div class="content" style="display:none">
+    <div class="row justify-content-center" align="center">
+        <div class="col-sm-12">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#" class="btn cancel-process-button" role="button" aria-disabled="true" style="float:left">
+                        <i class="fas fa-times"></i> CANCELAR PROCESO
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                </div>
+
+            </div>
+        </div>
+      
+        <div class="col-sm-12">
+
+            <div class="row">
+
+                <div class="col-sm-12 mt-3">
+                    <h4 class="step-title mt-2" style="text-align:center"> Información del contenido a enviar </h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12 mt-3">
+            <form id="content_form">
+                <div class="col-md-12 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> TIPO DE ENVIO </h5>
+                        <select class="form-control input-sm" id="content_shipping_type"  name="content_shipping_type" required style="text-align-last:center;">
+                            <option value="">Seleccione</option>
+                            <option value="envelope">Documentos</option>
+                            <option value="package">Paquetes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> CONTENIDO </h5>
+                        <input type="text" class="form-control input-sm" name="content_description" id="content_description" placeholder="Descripción del contenido a enviar" required>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> VALOR DECLARADO </h5>
+                        <input type="text" class="form-control input-sm" name="content_value" id="content_value" placeholder="Valor declarado del producto a enviar" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-12 mt-5">
+            <a href="#" class="btn edit-data-btn " role="button" aria-disabled="true" id="save_data_content" style="display:none">
+                GUARDAR CAMBIOS <i class="fas fa-check"></i>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+Saturn Management Utility v2.15 Release Notes
+=============================================================================
+
+v2.6
+-----------------------------------------------------------------------------
+- Added 'Save to Multiple Binary Files' option.
+- Added missing DUKPT tags and Card Removal Event tag.
+- Deleted value: 0A434E2DA0000001523010 - from - GET Enable Payment Sub-Scheme.
+- Deleted value: 0A434C2DA0000002771010 - from - GET PCD Transaction Limit.
+			
+v2.8
+-----------------------------------------------------------------------------
+- Added 'JCB Contact' AID.
+
+v2.10
+-----------------------------------------------------------------------------
+- Removed contact AIDs from 'PCD transaction limit - DF60' and 'Enable Payment Sub-Scheme DF 52'.
+- Added 'JCB Contact' AID to	'Additional terminal capabilities - 9F40',
+								'Merchant Category Code - 9F15',
+								'TAC default - DF58',
+								'TAC denial - DF59',
+								'TAC online - DF5A',
+								'Terminal Type - 9F35'.
+
+								v2.11
+-----------------------------------------------------------------------------
+- Fixed Dispaly_Returned_Objects bug. During Poll EVM with MagStripe card, FC wasn't displayed as it should.
+
+v2.12
+-----------------------------------------------------------------------------
+- Added CUP Contact AID ('A0 00 00 03 33 01 01 02') and it's RID ('A0 00 00 03 33') to the Public Keys list.
+- Unified applications for both Contact and Contactless under Terminal Risk Management ('9F1D').
+
+v2.13
+-----------------------------------------------------------------------------
+- Added CUP Contact to 'TAC Denial', 'TAC Online' and 'TAC Default' tags.
+- Fixed 'CUP Contact' bug, the AID was added without the 'Contact' prefix("CN-").
+
+
+v2.14
+-----------------------------------------------------------------------------
+- Added option to delete Public Key by right clicking on it (deleted from treeView and ConfigList).
+- When deleting key from the Config treeView, by pressing 'Set Changes' ot 'Set' it deletes all deleted keys from the reader.
+
+v2.15
+-----------------------------------------------------------------------------
+- Added Binary file formats to 'Two File Comparison'.
+- Added Binary format to 'Compare Reader To File'.
+

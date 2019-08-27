@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?wsdl" filename="wsDespachos.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FSchemas%2FRemesa" filename="remesasws.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_-472168131" filename="remesasws0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_1087912764" filename="remesasws1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_-1155180390" filename="remesasws2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_-1197883996" filename="remesasws3.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

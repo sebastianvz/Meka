@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="content" style="display:none">
+    <div class="row justify-content-center text-center">
+        <div class="col-sm-12">
+            <h2 class="step-title">INFORMACIÓN ADICIONAL</h2>
+            <hr />
+        </div>
+    </div>
+    <form id="content_form">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h5 class="step-title"> Observaciones </h5>
+                    <textarea style="height:150px !important;font-size:30px;" class="form-control input-xs " name="content_description" placeholder="" required></textarea>
+                </div>               
+                <div class="form-group">
+                    <h5 class="step-title"> Valor declarado</h5>
+                    <input type="number" style="font-size:30px;" class="form-control input-xs input-onlynumber" name="content_value" placeholder="" required>
+                </div>
+                <a href="#" class="btn default-button mt-2 continue-button" role="button" aria-disabled="true">
+                    CONTINUAR <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>

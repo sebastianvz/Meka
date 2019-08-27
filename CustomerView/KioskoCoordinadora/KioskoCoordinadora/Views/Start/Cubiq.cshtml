@@ -1,0 +1,84 @@
+﻿
+<style>
+    .flex-container {
+        display: flex;
+        height: 100%;
+    }
+
+        .flex-container > div {
+            width: 100%;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+    table {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+    }
+</style>
+
+<div class="cubiq" style="display:none">
+    <div class="row justify-content-center" align="center">
+        <div class="col-sm-12">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#" class="btn cancel-process-button" role="button" aria-disabled="true" style="float:left">
+                        <i class="fas fa-times"></i> CANCELAR PROCESO
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+
+            <div class="row">
+
+                <div class="col-sm-12 mt-3">
+                    <h4 class="step-title mt-2" style="text-align:center"> Medición de paquetes </h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            <div class="card" style="width: 35rem;">
+                <img style="height:480px" class="card-img-top" id="current_cubiq_image" src="~/Assets/kiosko/img/IMAGEN-BASCULA-558X480.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h4 class="step-title"> UBIQUE SU PAQUETE SOBRE LA BÁSCULA</h4>
+                    <hr style="border: 1.2px solid white;border-radius: 2px;width:30em" />
+                </div>
+                <div class="col-md-12 mt-3">
+                    <a href="#" class="btn btn-round-transparent-sm" id="btn_get_measures" style="font-size: 24px;" role="button" aria-disabled="true">
+                        OPRIMA PARA CALCULAR PESO<i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-12 mt-3">
+                    <hr style="border: 1.2px solid white;border-radius: 2px;width:30em" />
+                    <table>
+                        <tr>
+                            <th class="text-center">ALTO</th>
+                            <th class="text-center">ANCHO</th>
+                            <th class="text-center">PROFUNDO</th>
+                            <th class="text-center">PESO</th>
+                        </tr>
+                        <tr>
+                            <td class="text-center" id="measure_height"></td>
+                            <td class="text-center" id="measure_width"></td>
+                            <td class="text-center" id="measure_length"></td>
+                            <td class="text-center" id="measure_weight"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

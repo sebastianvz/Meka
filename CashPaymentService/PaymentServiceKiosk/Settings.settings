@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PaymentServiceKiosk" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KIOSKO_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/</Value>
+    </Setting>
+    <Setting Name="CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/configuration.json</Value>
+    </Setting>
+    <Setting Name="F56_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/f56.json</Value>
+    </Setting>
+    <Setting Name="JCM_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/jcm.json</Value>
+    </Setting>
+    <Setting Name="INVENTORY_CONFIG_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/inventory.json</Value>
+    </Setting>
+    <Setting Name="GUIDE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/guide/</Value>
+    </Setting>
+    <Setting Name="PAYMENT_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

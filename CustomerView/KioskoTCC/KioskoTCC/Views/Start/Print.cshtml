@@ -1,0 +1,95 @@
+﻿<div class="print" style="display:none">
+    <div class="row justify-content-center" align="center">
+
+        <div class="col-sm-12">
+            <h5 class="step-title"> IMPRESIÓN Y PEGADO DE ETIQUETA</h5>
+        </div>
+        <div class="col-sm-12 mt-5" id="print_guide_image" style="display:none">
+            <div class="card" style="width: 40em;">
+                <img style="height:400px" class="card-img-top" id="print_image" src="~/Assets/kiosko/img/paste_guide.gif" alt="">
+                <div class="card-body" style="background-color:#00397c;">
+                    <div style="display: flex; justify-content: space-between; color:white" id="retry_print_guide_btn">
+                        <p>Presione siguiente para continuar. Si desea imprimir nuevamente su etiqueta presione aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 mt-5">
+            <h5 class="modal-title"><i id="print_status_icon" class="fas fa-spinner make-it-spinn" style="color:#d52113;font-size:4em;margin-top:150px;"></i></h5>
+            <a href="#" class="btn btn-default-1 animated" role="button" aria-disabled="true" enable_print="true" id="print_status" guide_number="" style="font-size:50px;margin-top:50px;color:#d52113;border: 0px !important;">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade " tabindex="-1" role="dialog" id="finish_proccess_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-check" style="color:green;font-size:4em"></i></h5>
+
+            </div>
+            <div class="modal-body" style="justify-content:center">
+                <h4 class="text-primary text-center">El proceso ha finalizado correctamente. </h4>
+                <h4 class="text-primary text-center">Recuerde tomar su factura.</h4>
+                <h4 class="text-primary text-center">Gracias por utilizar nuestros servicios.</h4>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="guide_error_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-info-circle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 style="font-family: 'Open Sans', sans-serif !important;">SE HA PRESENTADO UN PROBLEMA</h2>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+
+                <button type="button" class="btn btn-default-sm" style="font-size:1.5em" id="retry_print" data-dismiss="modal">Presione para reintentar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="finish_proccess_help">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-info-circle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 style="font-family: 'Open Sans', sans-serif !important;" id="paste_guide_text"></h2>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+
+                <button type="button" class="btn btn-default-sm"  style="font-size:1.5em" id="open_door_modal" data-dismiss="modal">PRESIONE AQUÍ PARA INGRESAR LOS PAQUETES</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_open_door">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#d52113;    justify-content: center;">
+                <i class="fas fa-info-circle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body" style="justify-content:center">
+                <p style="font-size:1.5em" id="modal_message_test"> </p>
+                <p style="font-size:1.5em;font-weight:bold">ESTADO</p>
+                <a href="#" class="btn welcome-button-t" style="font-size:1.5em; color: #d52113" role="button" aria-disabled="true" id="door_status">
+                    
+                </a>
+            </div>            
+        </div>
+    </div>
+</div>
+
+

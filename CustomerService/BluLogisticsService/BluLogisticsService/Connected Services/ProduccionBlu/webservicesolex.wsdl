@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConsultaUltimoEstadoGuiasXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaUltimoEstadoGuiasXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaUltimoEstadoGuiasXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuiasXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuiasXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaPathImgGuiasXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaPathImgGuiaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuiaByDocumentoExterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPathImgGuiaByDocumentoExternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaPathImgGuiaByDocumentoExternoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearGuiaBlulogistics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guia" type="tns:EGuia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EGuia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioIdentificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioDireccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioTelefono" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ruta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioBarrio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kilos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDeclarado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCuentaCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentoExterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Guia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtrosNumeros" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CrearGuiaBlulogisticsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearGuiaBlulogisticsResult" type="tns:EError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EError">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SolicitarCuentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuentas" type="tns:ArrayOfECuentasCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfECuentasCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ECuentasCliente" nillable="true" type="tns:ECuentasCliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ECuentasCliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdCuentaCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDane" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SolicitarCuentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitarCuentasResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuentas" type="tns:ArrayOfECuentasCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarCiudades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudades" type="tns:ArrayOfECiudades" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfECiudades">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ECiudades" nillable="true" type="tns:ECiudades" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ECiudades">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdCiudad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SolicitarCiudadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitarCiudadesResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudades" type="tns:ArrayOfECiudades" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarRutas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rutas" type="tns:ArrayOfERutasOrigenDestino" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfERutasOrigenDestino">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ERutasOrigenDestino" nillable="true" type="tns:ERutasOrigenDestino" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ERutasOrigenDestino">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idRuta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodciudadOrigen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodciudadDestino" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SolicitarRutasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitarRutasResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="rutas" type="tns:ArrayOfERutasOrigenDestino" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarRuta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodciudadOrigen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodciudadDestino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ruta" type="tns:ERutasOrigenDestino" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarRutaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitarRutaResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="ruta" type="tns:ERutasOrigenDestino" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getValoresLiquidacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroGuia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valorFacturado" type="tns:EValorFacturado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EValorFacturado">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CostoManejo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getValoresLiquidacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getValoresLiquidacionResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="valorFacturado" type="tns:EValorFacturado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMaestroEstados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMaestroEstadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMaestroEstadosResult" type="tns:ArrayOfEEstadoPQ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEEstadoPQ">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EEstadoPQ" nillable="true" type="tns:EEstadoPQ" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EEstadoPQ">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaEstadosGuiasUltimaHora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaEstadosGuiasUltimaHoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaEstadosGuiasUltimaHoraResult" type="tns:ArrayOfEEstadoGuia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEEstadoGuia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EEstadoGuia" nillable="true" type="tns:EEstadoGuia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EEstadoGuia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoEstado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaEstado" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Guia" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaEtiquetaPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaEtiquetaPdfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaEtiquetaPdfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaPdfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGuiaPdfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaXRangoPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guiaInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guiaFinal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaXRangoPdfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGuiaXRangoPdfResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGuiaResult" type="tns:EGuiaCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EGuiaCliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CostoManejo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="KilosVolumen" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kilos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDeclarado" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estados" type="tns:ArrayOfEEstadoGuia" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioIdentificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioNombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioDireccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioTelefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatarioBarrio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentoExterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Guia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtrosNumeros" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="CiudadOrigen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CiudadDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuentaCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zona" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoBarras" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hub" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaGuiaXFecha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGuiaXFechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGuiaXFechaResult" type="tns:ArrayOfEGuiaCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEGuiaCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EGuiaCliente" nillable="true" type="tns:EGuiaCliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDatosEtiqueta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idcuenta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="daneCiudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="datosEtiqueta" type="tns:EDatosEtiqueta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EDatosEtiqueta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Prefijo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DaneDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zona" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDatosEtiquetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosEtiquetaResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="datosEtiqueta" type="tns:EDatosEtiqueta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmarGuiasPredespachadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmarGuiasPredespachadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmarGuiasPredespachadasResult" type="tns:ArrayOfEError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EError" nillable="true" type="tns:EError" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPreLiquidacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cuentaId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidades" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="kilos" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="volumen" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudadOrigenDane" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudadDestinoDane" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objLiquidacion" type="tns:viewLiquidacion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="viewLiquidacion">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="valorFlete" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="costoManejo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarifa" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Descuento" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFlete" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPreLiquidacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPreLiquidacionResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="objLiquidacion" type="tns:viewLiquidacion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoreferenciacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ubicacion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoreferenciacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoreferenciacionResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="ubicacion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRotuloEmpaque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paginas" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmpaqueViewModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ola" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Orden" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdenCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Consecutivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Solex" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DLx" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cajas" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CajaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CausalProcesoId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comentario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Almacen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ean" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsViewEdit" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unidad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remitente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeBarConsecutivo" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeBarOrden" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Filtro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Familia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeBarOrdenCliente" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcesoId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EstadoId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="isEmpaqueXFamilia" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdenImpresion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsecutivoImpresion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Precio" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CajaPalletId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsecutivoCaja" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsecutivoPallet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Columna1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Columna2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Columna3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Columna4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cadena" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isEmpaqueOneToOne" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conductor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Placa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Precinto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isInformacionDespacho" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PesoTotal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="isInformacionPallet" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="isConsecutivoAuto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="isError" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalProductos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalUnidades" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmpaqueViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmpaqueViewModel" nillable="true" type="tns:EmpaqueViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarRotuloEmpaqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarRotuloEmpaqueResult" type="tns:ArrayOfEmpaqueViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarOrden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paginas" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarOrdenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarOrdenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioMI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioMIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarUsuarioMIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RelacionDespacho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpresaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relacion_despacho_guias" type="tns:ArrayOfSolex_View_RelacionDespacho" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSolex_View_RelacionDespacho">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Solex_View_RelacionDespacho" nillable="true" type="tns:Solex_View_RelacionDespacho" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Solex_View_RelacionDespacho">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:EntityObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Contador" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cuenta" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Guia" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Documento_Externo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ciudad_Destino" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fecha_Creacion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EntityObject" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:StructuralObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EntityKey" type="tns:EntityKey" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StructuralObject" abstract="true" />
+      <s:complexType name="EntityKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EntitySetName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityContainerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityKeyValues" type="tns:ArrayOfEntityKeyMember" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntityKeyMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntityKeyMember" nillable="true" type="tns:EntityKeyMember" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntityKeyMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RelacionDespachoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RelacionDespachoResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="relacion_despacho_guias" type="tns:ArrayOfSolex_View_RelacionDespacho" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cotizador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="empresaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorDeclarado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="peso" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="volumen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ruta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseCotizador" type="tns:CotizadorEstandarResponseViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CotizadorEstandarResponseViewModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CostoManejo" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorTotal" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CotizadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CotizadorResult" type="tns:EError" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseCotizador" type="tns:CotizadorEstandarResponseViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosEtiqueta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paginas" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StikerModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Guia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroAlmacenamiento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remitente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CiudadOrigen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Factura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DireccionRemitente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DireccionDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelefonoDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CiudadDestino" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Caja" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CajaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaGuia" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="sucursalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentoExterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Origen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Idsucursal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescSucursal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre_sucursal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroordencliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechastage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numerordenBlu" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaOrden" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroordenwms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="almacenBlu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="localidad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idCaja" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="numeroTienda" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="referenciaCte" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="observacionesPedido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="zonaPartida" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pedidoCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="articulo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Idcliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="cantordenada" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="barrio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ciudad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaelaboracion" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Unidades" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_destino" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="daneDestino" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImagenCodeBar" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImagenCodeBar128" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImagenCodeMultidimencional" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="producto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GuiaId" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="fletesPagos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estadar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tobogan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoBarras" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CostoManejo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorFlete" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="KilosVolumen" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kilos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorDeclarado" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStikerModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StikerModel" nillable="true" type="tns:StikerModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaDatosEtiquetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaDatosEtiquetaResult" type="tns:ArrayOfStikerModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarDatosEtiqueta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paginas" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarDatosEtiquetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarDatosEtiquetaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaUltimoEstadoGuiasXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaUltimoEstadoGuiasXml" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaUltimoEstadoGuiasXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaUltimoEstadoGuiasXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiasXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuiasXml" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiasXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuiasXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuia" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiaByDocumentoExternoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuiaByDocumentoExterno" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPathImgGuiaByDocumentoExternoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaPathImgGuiaByDocumentoExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearGuiaBlulogisticsSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearGuiaBlulogistics" />
+  </wsdl:message>
+  <wsdl:message name="CrearGuiaBlulogisticsSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearGuiaBlulogisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarCuentasSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitarCuentas" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarCuentasSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarCiudadesSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitarCiudades" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarCiudadesSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarCiudadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarRutasSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitarRutas" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarRutasSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarRutasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarRutaSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitarRuta" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarRutaSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarRutaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getValoresLiquidacionSoapIn">
+    <wsdl:part name="parameters" element="tns:getValoresLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="getValoresLiquidacionSoapOut">
+    <wsdl:part name="parameters" element="tns:getValoresLiquidacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMaestroEstadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMaestroEstados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMaestroEstadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMaestroEstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaEstadosGuiasUltimaHoraSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaEstadosGuiasUltimaHora" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaEstadosGuiasUltimaHoraSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaEstadosGuiasUltimaHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaEtiquetaPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaEtiquetaPdf" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaEtiquetaPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaEtiquetaPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaPdf" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaXRangoPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaXRangoPdf" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaXRangoPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaXRangoPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGuia" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaXFechaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaXFecha" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGuiaXFechaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGuiaXFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosEtiquetaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosEtiquetaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmarGuiasPredespachadasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmarGuiasPredespachadas" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmarGuiasPredespachadasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmarGuiasPredespachadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPreLiquidacionSoapIn">
+    <wsdl:part name="parameters" element="tns:getPreLiquidacion" />
+  </wsdl:message>
+  <wsdl:message name="getPreLiquidacionSoapOut">
+    <wsdl:part name="parameters" element="tns:getPreLiquidacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoreferenciacionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoreferenciacion" />
+  </wsdl:message>
+  <wsdl:message name="GetGeoreferenciacionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoreferenciacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRotuloEmpaqueSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarRotuloEmpaque" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRotuloEmpaqueSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarRotuloEmpaqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarOrdenSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarOrden" />
+  </wsdl:message>
+  <wsdl:message name="ValidarOrdenSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarOrdenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioMISoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioMI" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioMISoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioMIResponse" />
+  </wsdl:message>
+  <wsdl:message name="RelacionDespachoSoapIn">
+    <wsdl:part name="parameters" element="tns:RelacionDespacho" />
+  </wsdl:message>
+  <wsdl:message name="RelacionDespachoSoapOut">
+    <wsdl:part name="parameters" element="tns:RelacionDespachoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CotizadorSoapIn">
+    <wsdl:part name="parameters" element="tns:Cotizador" />
+  </wsdl:message>
+  <wsdl:message name="CotizadorSoapOut">
+    <wsdl:part name="parameters" element="tns:CotizadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosEtiquetaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosEtiquetaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarDatosEtiquetaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarDatosEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="ValidarDatosEtiquetaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarDatosEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSolexSoap">
+    <wsdl:operation name="ConsultaUltimoEstadoGuiasXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para consultar el ultimo estado de una o varias guias separado por comas(,). retorna un xml con la información.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaUltimoEstadoGuiasXmlSoapIn" />
+      <wsdl:output message="tns:ConsultaUltimoEstadoGuiasXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiasXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta la url de la imagenes de la guia fisica  o varias guias separado por coma (,) retorna un xml con la información.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaPathImgGuiasXmlSoapIn" />
+      <wsdl:output message="tns:ConsultaPathImgGuiasXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que consulta la url de la guia fisica</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaPathImgGuiaSoapIn" />
+      <wsdl:output message="tns:ConsultaPathImgGuiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiaByDocumentoExterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que consulta la url por el documento externo</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaPathImgGuiaByDocumentoExternoSoapIn" />
+      <wsdl:output message="tns:ConsultaPathImgGuiaByDocumentoExternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearGuiaBlulogistics">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para crear la guia blulogistis</wsdl:documentation>
+      <wsdl:input message="tns:CrearGuiaBlulogisticsSoapIn" />
+      <wsdl:output message="tns:CrearGuiaBlulogisticsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCuentas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Lista las cuentas o acuerdos o empresas que estan asociadas a un usuario.</wsdl:documentation>
+      <wsdl:input message="tns:SolicitarCuentasSoapIn" />
+      <wsdl:output message="tns:SolicitarCuentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCiudades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista las ciudaes que se manejan en el sistema blulogistics</wsdl:documentation>
+      <wsdl:input message="tns:SolicitarCiudadesSoapIn" />
+      <wsdl:output message="tns:SolicitarCiudadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRutas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista la rutas disponibles para despachos entre ciudades.</wsdl:documentation>
+      <wsdl:input message="tns:SolicitarRutasSoapIn" />
+      <wsdl:output message="tns:SolicitarRutasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRuta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ruta para un origen y destino.</wsdl:documentation>
+      <wsdl:input message="tns:SolicitarRutaSoapIn" />
+      <wsdl:output message="tns:SolicitarRutaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getValoresLiquidacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para consulta de valor facturado por guía</wsdl:documentation>
+      <wsdl:input message="tns:getValoresLiquidacionSoapIn" />
+      <wsdl:output message="tns:getValoresLiquidacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMaestroEstados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene todos los Maestro estados o envetos En paqueteo</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaMaestroEstadosSoapIn" />
+      <wsdl:output message="tns:ConsultaMaestroEstadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstadosGuiasUltimaHora">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Metodo que consulta el ultimo estado de las guias en la ultima hora de la fecha Enviada </wsdl:documentation>
+      <wsdl:input message="tns:ConsultaEstadosGuiasUltimaHoraSoapIn" />
+      <wsdl:output message="tns:ConsultaEstadosGuiasUltimaHoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEtiquetaPdf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene las etiquetas de una guia y devuelve string Base64 del documento PDF</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaEtiquetaPdfSoapIn" />
+      <wsdl:output message="tns:ConsultaEtiquetaPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaPdf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene las  guia o guias (se pueden enviar varias guias separadas(,) y devuelve string Base64 del documento PDF</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaGuiaPdfSoapIn" />
+      <wsdl:output message="tns:ConsultaGuiaPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXRangoPdf">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene las  guias por rango y devuelve string Base64 del documento PDF</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaGuiaXRangoPdfSoapIn" />
+      <wsdl:output message="tns:ConsultaGuiaXRangoPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene la informacion de la guia y devuelve un xml de toda la informacion</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaGuiaSoapIn" />
+      <wsdl:output message="tns:ConsultaGuiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXFecha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene la informacion de la guia y devuelve un xml de toda la informacion por fecha (todas las creadas en la fecha dada.)</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaGuiaXFechaSoapIn" />
+      <wsdl:output message="tns:ConsultaGuiaXFechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEtiqueta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene los datos de la etiqueta</wsdl:documentation>
+      <wsdl:input message="tns:GetDatosEtiquetaSoapIn" />
+      <wsdl:output message="tns:GetDatosEtiquetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarGuiasPredespachadas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que recibe un  varias guias separadas por (,) y devuelve si  fueron confirmadas con exito.</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmarGuiasPredespachadasSoapIn" />
+      <wsdl:output message="tns:ConfirmarGuiasPredespachadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPreLiquidacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para consultar la pre-liquidacion de una guia</wsdl:documentation>
+      <wsdl:input message="tns:getPreLiquidacionSoapIn" />
+      <wsdl:output message="tns:getPreLiquidacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoreferenciacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta la Georeferenciacion</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoreferenciacionSoapIn" />
+      <wsdl:output message="tns:GetGeoreferenciacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRotuloEmpaque">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo de consulta para las etiquetas del empaque - Almacenamiento</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarRotuloEmpaqueSoapIn" />
+      <wsdl:output message="tns:ConsultarRotuloEmpaqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarOrden">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para validar la orden o consecutivo del empaque - Almacenamiento</wsdl:documentation>
+      <wsdl:input message="tns:ValidarOrdenSoapIn" />
+      <wsdl:output message="tns:ValidarOrdenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioMI">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para validar el usuario - Aplicacion Escritorio - Modulo Impresiones</wsdl:documentation>
+      <wsdl:input message="tns:ValidarUsuarioMISoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioMISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RelacionDespacho">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para Obtener la relacion de Despacho de un cliente</wsdl:documentation>
+      <wsdl:input message="tns:RelacionDespachoSoapIn" />
+      <wsdl:output message="tns:RelacionDespachoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para cotizar el valor de un despacho</wsdl:documentation>
+      <wsdl:input message="tns:CotizadorSoapIn" />
+      <wsdl:output message="tns:CotizadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosEtiqueta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo que obtiene la informacion de la guia para genera los stickers. - Modulo Impresiones</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDatosEtiquetaSoapIn" />
+      <wsdl:output message="tns:ConsultaDatosEtiquetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarDatosEtiqueta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metodo para validar informacion del stiker para una guia. - Modulo Impresiones</wsdl:documentation>
+      <wsdl:input message="tns:ValidarDatosEtiquetaSoapIn" />
+      <wsdl:output message="tns:ValidarDatosEtiquetaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSolexSoap" type="tns:WebServiceSolexSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaUltimoEstadoGuiasXml">
+      <soap:operation soapAction="http://tempuri.org/ConsultaUltimoEstadoGuiasXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiasXml">
+      <soap:operation soapAction="http://tempuri.org/ConsultaPathImgGuiasXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuia">
+      <soap:operation soapAction="http://tempuri.org/ConsultaPathImgGuia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiaByDocumentoExterno">
+      <soap:operation soapAction="http://tempuri.org/ConsultaPathImgGuiaByDocumentoExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearGuiaBlulogistics">
+      <soap:operation soapAction="http://tempuri.org/CrearGuiaBlulogistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCuentas">
+      <soap:operation soapAction="http://tempuri.org/SolicitarCuentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCiudades">
+      <soap:operation soapAction="http://tempuri.org/SolicitarCiudades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRutas">
+      <soap:operation soapAction="http://tempuri.org/SolicitarRutas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRuta">
+      <soap:operation soapAction="http://tempuri.org/SolicitarRuta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValoresLiquidacion">
+      <soap:operation soapAction="http://tempuri.org/getValoresLiquidacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMaestroEstados">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMaestroEstados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstadosGuiasUltimaHora">
+      <soap:operation soapAction="http://tempuri.org/ConsultaEstadosGuiasUltimaHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEtiquetaPdf">
+      <soap:operation soapAction="http://tempuri.org/ConsultaEtiquetaPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaPdf">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGuiaPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXRangoPdf">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGuiaXRangoPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuia">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGuia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXFecha">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGuiaXFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEtiqueta">
+      <soap:operation soapAction="http://tempuri.org/GetDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarGuiasPredespachadas">
+      <soap:operation soapAction="http://tempuri.org/ConfirmarGuiasPredespachadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPreLiquidacion">
+      <soap:operation soapAction="http://tempuri.org/getPreLiquidacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoreferenciacion">
+      <soap:operation soapAction="http://tempuri.org/GetGeoreferenciacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRotuloEmpaque">
+      <soap:operation soapAction="http://tempuri.org/ConsultarRotuloEmpaque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarOrden">
+      <soap:operation soapAction="http://tempuri.org/ValidarOrden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioMI">
+      <soap:operation soapAction="http://tempuri.org/ValidarUsuarioMI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RelacionDespacho">
+      <soap:operation soapAction="http://tempuri.org/RelacionDespacho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador">
+      <soap:operation soapAction="http://tempuri.org/Cotizador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosEtiqueta">
+      <soap:operation soapAction="http://tempuri.org/ConsultaDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarDatosEtiqueta">
+      <soap:operation soapAction="http://tempuri.org/ValidarDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSolexSoap12" type="tns:WebServiceSolexSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaUltimoEstadoGuiasXml">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaUltimoEstadoGuiasXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiasXml">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaPathImgGuiasXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuia">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaPathImgGuia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPathImgGuiaByDocumentoExterno">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaPathImgGuiaByDocumentoExterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearGuiaBlulogistics">
+      <soap12:operation soapAction="http://tempuri.org/CrearGuiaBlulogistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCuentas">
+      <soap12:operation soapAction="http://tempuri.org/SolicitarCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCiudades">
+      <soap12:operation soapAction="http://tempuri.org/SolicitarCiudades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRutas">
+      <soap12:operation soapAction="http://tempuri.org/SolicitarRutas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRuta">
+      <soap12:operation soapAction="http://tempuri.org/SolicitarRuta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValoresLiquidacion">
+      <soap12:operation soapAction="http://tempuri.org/getValoresLiquidacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMaestroEstados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMaestroEstados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstadosGuiasUltimaHora">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaEstadosGuiasUltimaHora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEtiquetaPdf">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaEtiquetaPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaPdf">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaGuiaPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXRangoPdf">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaGuiaXRangoPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuia">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaGuia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGuiaXFecha">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaGuiaXFecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosEtiqueta">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarGuiasPredespachadas">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmarGuiasPredespachadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPreLiquidacion">
+      <soap12:operation soapAction="http://tempuri.org/getPreLiquidacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoreferenciacion">
+      <soap12:operation soapAction="http://tempuri.org/GetGeoreferenciacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRotuloEmpaque">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarRotuloEmpaque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarOrden">
+      <soap12:operation soapAction="http://tempuri.org/ValidarOrden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioMI">
+      <soap12:operation soapAction="http://tempuri.org/ValidarUsuarioMI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RelacionDespacho">
+      <soap12:operation soapAction="http://tempuri.org/RelacionDespacho" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cotizador">
+      <soap12:operation soapAction="http://tempuri.org/Cotizador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosEtiqueta">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarDatosEtiqueta">
+      <soap12:operation soapAction="http://tempuri.org/ValidarDatosEtiqueta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceSolex">
+    <wsdl:port name="WebServiceSolexSoap" binding="tns:WebServiceSolexSoap">
+      <soap:address location="http://testsolex.blulogistics.net/solex/services/webservicesolex.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSolexSoap12" binding="tns:WebServiceSolexSoap12">
+      <soap12:address location="http://testsolex.blulogistics.net/solex/services/webservicesolex.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

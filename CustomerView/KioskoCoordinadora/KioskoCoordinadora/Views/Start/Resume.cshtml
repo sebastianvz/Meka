@@ -1,0 +1,157 @@
+﻿
+<div class="resume" style="display:none">
+    <div classs="row justify-content-center" align="center" style="align-content:center">
+
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#" class="btn cancel-process-button" role="button" aria-disabled="true" style="float:left">
+                        <i class="fas fa-times"></i> CANCELAR PROCESO
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="row" style="display:grid">
+                    <h5 class="step-title" style="float:right; font-size: 30px; margin-bottom: 15px;"> RESUMEN DE ENVÍO</h5>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="card mb-3" style="max-width: 30rem; border-top-left-radius: 10px !important; border-top-right-radius: 10px !important; border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important;">
+                    <div class="card-header " style="color:white;background-color:#00397c; border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;">
+                        <label class="ml-1" style="font-weight: bold;">
+                            REMITENTE
+                        </label>
+                        <span class="float-right clickable edit-data" id="edit_origin">Editar <i class="fa fa-pen"></i></span>
+                    </div>
+                    <table class="table table-striped">
+                        <tbody id="resume_origin_table"></tbody>
+                    </table>
+                </div>
+
+                <div class="card mb-3" style="max-width: 30rem;">
+                    <div class="card-header" style="color:white; background-color:#00397c; border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;">
+                        <label class="ml-1" style="font-weight: bold;">
+                            CONTENIDO
+                        </label>
+                        <span class="float-right clickable edit-data" id="edit_content">Editar <i class="fa fa-pen"></i></span>
+                    </div>
+                    <table class="table table-striped">
+                        <tbody id="resume_content_table"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 30rem;">
+                    <div class="card-header" style="color:white;background-color:#00397c; border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;">
+                        <label class="ml-1" style="font-weight: bold;">
+                            DESTINATARIO
+                        </label>
+                        <span class="float-right clickable edit-data" id="edit_receiver">Editar <i class="fa fa-pen"></i></span>
+                    </div>
+                    <table class="table table-striped">
+                        <tbody id="resume_receiver_table"></tbody>
+                    </table>
+                </div>
+                <div class="card mb-3" style="max-width: 30rem;">
+                    <div class="card-header" style="color:white;background-color:#00397c; border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;">
+                        <label class="ml-1" style="font-weight: bold;">
+                            FACTURA
+                        </label>
+                    </div>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><p class="ml-4 mt-2" style="color:dimgrey" id="resume_total_cost"><strong>Total a pagar: $</strong> </p></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#" class="btn" role="button" id="btn_do_payment" aria-disabled="true" style="font-size: 30px;">
+                    REALIZAR PAGO<i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+<style>
+    .modal-content {
+        width: 600px;
+    }
+    .modal-center-cs {
+        margin-top: 200px !important;
+    }
+    .modal-center-cs-60 {
+        top: 60% !important;
+    }
+
+    .cashMethod {
+        width: 100px;
+        height: 100px;
+        background: url("../Assets/kiosko/img/EFECTIVO-GRIS.png") no-repeat;
+    }
+    .cashMethod:hover {
+        background: url("../Assets/kiosko/img/EFECTIVO-AZUL.png") no-repeat;
+    }
+
+    .posMethod {
+        width: 100px;
+        height: 100px;
+        background: url("../Assets/kiosko/img/TARJETA-GRIS.png") no-repeat;
+    }
+    .posMethod:hover {
+        background: url("../Assets/kiosko/img/TARJETA-AZUL.png") no-repeat;
+    }
+
+</style>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment" data-backdrop="static" data-keyboard="false" style="margin-top:30px">
+    <div class="modal-dialog modal-dialog-centered modal-center-cs" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#00397c;justify-content: center;">
+                <h5 class="modal-title" style="color:white">REALIZAR PAGO</h5>
+                <h5 class="modal-title" id="modal_payment_title" style="color:white"></h5>
+            </div>
+            <div class="modal-body" id="modal_payment_body"></div>
+            <div class="modal-footer" style="justify-content:center">
+                <a href="#" class="btn btn-round-pulse-sm" id="modal_payment_status" role="button" style="color:#00397c !important" aria-disabled="true">
+                    Verificando pago <label id="modal_payment_status_timeout" style="display:none; color:white"></label> <i class="far fa-clock ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_payment_type" style="margin-top:0px">
+    <div class="modal-dialog modal-dialog-centered modal-center-cs" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#00397c; justify-content: center;">
+                <label style="color:white; margin-bottom: 0px; font-size:1.5em">Elige tu método de pago</label>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6" style="display:grid">
+                        <div id="btn_payment_cash" style="margin: 0 auto" class="btn_payment_method cashMethod"></div>                 
+                    </div>
+                    <div class="col-md-6" style="display:grid; border-left: 2px solid #686868">
+                        <div id="btn_payment_pos" style="margin: 0 auto" class="btn_payment_method posMethod"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn btn-round" data-dismiss="modal" data-backdrop="false">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

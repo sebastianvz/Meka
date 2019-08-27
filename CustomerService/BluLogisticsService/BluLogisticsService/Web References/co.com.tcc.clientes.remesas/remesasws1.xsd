@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.tcc.com.co/xsd" elementFormDefault="qualified" targetNamespace="http://www.tcc.com.co/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_-1155180390" />
+  <xsd:include schemaLocation="http://clientes.tcc.com.co:1080/api/clientes/remesasws?SCHEMA%2FRemesaApi%2FWSDLs%2FXMLSchema_-1197883996" />
+  <xsd:complexType name="tpClienteBasico">
+    <xsd:sequence>
+      <xsd:element name="tercero">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="persona" type="tpPersonaBasico" />
+            <xsd:element name="empresa" type="tpEmpresaBasico" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditoria" type="tpAuditoria" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lsTelefonos">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="telefono" type="tpTipoContactoBasico" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpPersonaBasico">
+    <xsd:sequence>
+      <xsd:element name="digitochequeo" type="xsd:string" />
+      <xsd:element name="razonsocial" type="xsd:string" />
+      <xsd:element name="identificacion" type="tpIdentificacionClienteBasico" />
+      <xsd:element name="unidanegocio" type="tpUnidadNegocioBasico" />
+      <xsd:element name="genero" type="xsd:string" />
+      <xsd:element name="primernombre" type="xsd:string" />
+      <xsd:element name="segundonombre" type="xsd:string" />
+      <xsd:element name="primerapellido" type="xsd:string" />
+      <xsd:element name="segundoapellido" type="xsd:string" />
+      <xsd:element name="marcacomercial" type="xsd:string" />
+      <xsd:element name="ciudad" type="tpCiudadBasico" />
+      <xsd:element name="departamento" type="tpDepartamentoBasico" />
+      <xsd:element name="pais" type="tpPaisBasico" />
+      <xsd:element name="tercerodireccion" type="tpTerceroDireccionBasico" />
+      <xsd:element name="tipodireccion" type="xsd:string" />
+      <xsd:element name="tipotelefono" type="xsd:string" />
+      <xsd:element name="tipoemail" type="xsd:string" />
+      <xsd:element name="telefonos" type="lsTelefonos" />
+      <xsd:element name="correoelectronico" type="tpTipoContactoBasico" />
+      <xsd:element name="observaciones" type="xsd:string" />
+      <xsd:element name="tipocliente" type="xsd:string" />
+      <xsd:element name="latitud" type="xsd:string" />
+      <xsd:element name="longitud" type="xsd:string" />
+      <xsd:element name="zonaaltoriesgo" type="xsd:string" />
+      <xsd:element name="auditoria" type="tpAuditoria" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpEmpresaBasico">
+    <xsd:sequence>
+      <xsd:element name="idtercero" type="xsd:string" />
+      <xsd:element name="iduen" type="xsd:string" />
+      <xsd:element name="identificacion" type="tpIdentificacionClienteBasico" />
+      <xsd:element name="razonsocial" type="xsd:string" />
+      <xsd:element name="marcacomercial" type="xsd:string" />
+      <xsd:element name="idciudad" type="xsd:string" />
+      <xsd:element name="idcontacto" type="xsd:string" />
+      <xsd:element name="tercerodireccion" type="tpTerceroDireccionBasico" />
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="tipocliente" type="xsd:string" />
+      <xsd:element name="departamento" type="xsd:string" />
+      <xsd:element name="pais" type="xsd:string" />
+      <xsd:element name="latitud" type="xsd:string" />
+      <xsd:element name="longitud" type="xsd:string" />
+      <xsd:element name="auditoria" type="tpAuditoria" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpIdentificacionCliente">
+    <xsd:sequence>
+      <xsd:element name="tipoidentificacion" type="tpIdentificacionClienteBasico" />
+      <xsd:element name="identificacion" type="xsd:string" />
+      <xsd:element name="digitoverificacion" type="xsd:string" />
+      <xsd:element name="nombre" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpContactoBasico">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="tpPersonaBasico" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="tpSedeBasico">
+    <xsd:sequence>
+      <xsd:element name="idtercero" type="xsd:string" />
+      <xsd:element name="iduen" type="xsd:string" />
+      <xsd:element name="nombresede" type="xsd:string" />
+      <xsd:element name="idciudad" type="xsd:string" />
+      <xsd:element name="auditoria" type="tpAuditoria" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpTerceroDireccionBasico">
+    <xsd:sequence>
+      <xsd:element name="idtercero" type="xsd:string" />
+      <xsd:element name="direccionestandar" type="xsd:string" />
+      <xsd:element name="iddireccion" type="xsd:string" />
+      <xsd:element name="nombrebarrio" type="xsd:string" />
+      <xsd:element name="codigopostal" type="xsd:string" />
+      <xsd:element name="auditoria" type="tpAuditoria" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tpIdentificacionClienteBasico">
+    <xsd:sequence>
+      <xsd:element name="tipoidentificacion" type="tpIdentificacionBasico" />
+      <xsd:element name="identificacion" type="xsd:string" />
+      <xsd:element name="documento" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

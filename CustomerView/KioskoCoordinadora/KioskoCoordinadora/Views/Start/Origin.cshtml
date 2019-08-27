@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+<div class="origin" style="display:none">
+    <div class="row justify-content-center" align="center">
+        <div class="col-sm-12">
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#" class="btn cancel-process-button" role="button" aria-disabled="true" style="float:left">
+                        <i class="fas fa-times"></i> CANCELAR PROCESO
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+
+            <div class="row">
+
+                <div class="col-sm-12 mt-3">
+                    <h4 class="step-title mt-2" style="text-align:center"> Información del remitente que envia </h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <form id="origin_form">
+            <div class="row" style="justify-content: center">      
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title"> INGRESE NOMBRE DE REMITENTE</h5>
+                        <input type="text" class="form-control input-xs" name="origin_name" id="origin_name" placeholder="Persona / empresa que envia" autofocus required>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> IDENTIFICACIÓN </h5>
+                        <input class="form-control input-xs input-onlynumberAndDash" name="origin_identification_number" id="origin_identification_number" placeholder="Cédula / NIT" required>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> DEPARTAMENTO DE RESIDENCIA </h5>
+                        <select class="form-control input-xs department_list" id="origin_department" name="origin_department" required style="text-align-last:center;">
+                            <option selected disabled>Seleccione el departamento</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> CIUDAD DE RESIDENCIA</h5>
+                        <select class="form-control input-xs" id="origin_city" name="origin_city" required style="text-align-last:center;">
+                            <option selected disabled>Seleccione la ciudad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> TELÉFONO DE REMITENTE</h5>
+                        <input type="number" class="form-control input-xs" name="origin_phone" id="origin_phone" placeholder="Celular o fijo" required>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <h5 class="step-title" align="center"> DIRECCIÓN DE RESIDENCIA </h5>
+                        <input type="text" class="form-control input-xs " name="origin_address" id="origin_address" placeholder="Dirección de residencia" required>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

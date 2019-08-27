@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="origin" style="display:none">
+    <div class="row justify-content-center text-center">
+        <div class="col-sm-12">
+            <h2 class="step-title">INFORMACIÓN REMITENTE</h2>
+            <hr/>
+        </div>
+    </div>
+    <form id="origin_form">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-7">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <h5 class="step-title">TIPO</h5>
+                        <select class="form-control input-xxxs" style="text-align-last:center;" name="origin_identification_type" id="origin_identification_type" required>
+                            <option>CC</option>
+                            <option>NIT</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <h5 class="step-title"> Identificación </h5>
+                        <input type="number" class="form-control input-xxxs" name="origin_identification_number" id="origin_identification_number" placeholder="" required>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <h5 class="step-title"> Nombre o razón social </h5>
+                    <input type="text" class="form-control input-xs" name="origin_name" id="origin_name" placeholder="" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <h5 class="step-title">CIUDAD</h5>
+                        <input type="text" class="form-control input-xxxs " name="origin_city" id="origin_city" placeholder="" value="MEDELLIN" disabled>
+                    </div>
+                    <div class="form-group col-md-7">
+                        <h5 class="step-title"> Dirección </h5>
+                        <input type="text" class="form-control input-xxxs " name="origin_address" id="origin_address" placeholder="" required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h5 class="step-title"> Teléfono de contacto </h5>
+                    <input type="number" class="form-control input-xs input-onlynumber" name="origin_phone" id="origin_phone" placeholder="" required>
+                </div>
+                
+                <div class="form-group">
+                    <h5 class="step-title"> Correo electrónico</h5>
+                    <input type="checkbox" id="check_no_email" />
+                    <label for="check_no_email" style="font-weight:bold">NO POSEO CORREO</label>
+                    <input type="email" class="form-control input-xs " name="origin_email" id="origin_email" nplaceholder="" required>
+                </div>
+
+               
+                <a href="#" class="btn default-button continue-button" role="button" aria-disabled="true">
+                    CONTINUAR <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </form>
+</div>

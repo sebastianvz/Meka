@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CoordinadoraService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CoordinadoraService_com_coordinadora_sandbox_despachos_RpcServerSoapManagerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.coordinadora.com/ags/1.5/server.php</Value>
+    </Setting>
+    <Setting Name="CoordinadoraService_com_coordinadora_sandbox_guias_JRpcServerSoapManagerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://guias.coordinadora.com/ws/guias/1.6/server.php</Value>
+    </Setting>
+    <Setting Name="GUIDE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/guide/</Value>
+    </Setting>
+    <Setting Name="INVOICE_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/temp/invoice/</Value>
+    </Setting>
+    <Setting Name="PAYMENT_CONFIGURATION_PATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:/Kiosko/config/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

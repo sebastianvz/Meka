@@ -1,0 +1,72 @@
+﻿
+<div class="modal" tabindex="-1" role="dialog" id="modal_open_box">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#4e73df;    justify-content: center;">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Pantalla</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary kiosko-admin-action-open-box" id="screen_btn" action="Screen"><i class="fas fa-2x fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Recibidor de paquetes</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary kiosko-admin-action-open-box" id="receive_btn" action="ContainerReceiver"><i class="fas fa-2x fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 100%">
+                            <div class="card-body">
+                                <h5 class="card-title">Dinero</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary kiosko-admin-action-open-box" id="cash_btn" action="CashContainer"><i class="fas fa-2x fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card" style="width: 100%">
+                            <div class="card-body">
+                                <h5 class="card-title">Mensajeria</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary kiosko-admin-action-open-box" id="envelop_btn" action="Bascula"><i class="fas fa-2x fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm " data-dismiss="modal">CERRAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="logOut_process_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="text-align:center; ">
+            <div class="modal-header" style="background-color:#4e73df;    justify-content: center;">
+                <i class="fas fa-exclamation-triangle fa-5x" style="color:white"></i>
+            </div>
+            <div class="modal-body">
+                <h2 id="error_message_modal_title">¿Está seguro que desea cerrar sesión?</h2>
+            </div>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="button" class="btn default-button-sm btn-cancel-process" id="logOutId" data-dismiss="modal" exit="true">SI</button>
+                <button type="button" class="btn default-button-sm btn-cancel-process " data-dismiss="modal" exit="false">NO</button>
+            </div>
+        </div>
+    </div>
+</div>

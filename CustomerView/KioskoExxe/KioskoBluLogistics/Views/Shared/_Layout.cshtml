@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosko</title>
+    <link href="~/Assets/lib/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/Assets/kiosko/css/kiosko.css" rel="stylesheet" />
+    <link href="~/Assets/lib/fontawesome/all.css" rel="stylesheet" />
+    <script src="~/Assets/lib/fontawesome/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+
+
+</head>
+<body class="d-flex flex-column h-100 mt-7">
+
+    <div id="loader" style="display : none"></div>
+    <main role="main" class="flex-shrink-0">
+        @RenderBody()
+    </main>
+
+    @Html.Partial("~/Views/Shared/Modal.cshtml")
+    <footer class="footer mt-auto py-3" style="display:none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div style="display: flex; justify-content: space-between">
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: left;display: inline-block;display:none" id="footer_retry_all_process">
+                                    <a href="#" class="btn btn_retry_all_process" role="button" aria-disabled="true" style="float:left">
+                                        ¿REALIZAR OTRO ENVÍO?
+                                    </a>
+                                </div>
+                                <div class="col-md-12" style="text-align: left;display: inline-block" id="footer_left">
+                                    <i class="fas fa-arrow-circle-left fa-5x back-button round-button text-uppercase" goto="start" id="btn_back_content">
+                                    </i>
+                                    <h4 class="" id="text_back" style="display:none;color:white;display:inline;position: relative;top: -25%; transform: translateY(50%);">
+                                        ANTERIOR
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="progress_bar" style="display:none;display: table;margin: 0 auto;">
+                                <span class="dot progress_bar" id="progress_bar_1"></span>
+                                <span class="dot progress_bar" id="progress_bar_2"></span>
+                                <span class="dot progress_bar" id="progress_bar_3"></span>
+                                <span class="dot progress_bar" id="progress_bar_4"></span>
+                                <span class="dot progress_bar" id="progress_bar_5"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: right;display: inline-block;">
+                                    <h4 class="" id="text_next" style="color:white;display:inline;position: relative;top: -25%; transform: translateY(50%);">
+                                        SIGUIENTE
+                                    </h4>
+                                    <i class="fas fa-arrow-circle-right fa-5x continue-button round-button text-uppercase"
+                                       id="btn_do_payment">
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <script src="~/Assets/lib/js/jquery/jquery.js"></script>
+    <script src="~/Assets/lib/js/bootstrap/bootstrap.js"></script>
+
+    <script src="~/Assets/kiosko/js/modules/appConfig.js"></script>
+    <script src="~/Assets/kiosko/js/modules/communication.js"></script>
+    <script src="~/Assets/kiosko/js/modules/custom.js"></script>
+    <script src="~/Assets/kiosko/js/modules/modal.js"></script>
+    <script src="~/Assets/kiosko/js/modules/shipping.js"></script>
+    <script src="~/Assets/kiosko/js/modules/steps.js"></script>
+    <script src="~/Assets/kiosko/js/modules/utilities.js"></script>
+    <script src="~/Assets/kiosko/js/modules/validation.js"></script>
+
+
+    <script src="~/Assets/kiosko/js/test/shippingtest.js"></script>
+    <script src="~/Assets/kiosko/js/test/test.js"></script>
+
+    <script src="~/Assets/kiosko/js/kiosko.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
